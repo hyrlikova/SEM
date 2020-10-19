@@ -1,6 +1,6 @@
 <?php include_once "header.php"?>
 
-<link href ="contact.css" rel = "stylesheet">
+<link href ="kontakt.css" rel = "stylesheet">
 
 <div class="kontainer">
     <div class="kontakt">

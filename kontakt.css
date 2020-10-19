@@ -11,12 +11,10 @@
 .kontakt{
     line-height:50px;
     background-color: #a5c9ca;
-    font-family: "Comic Sans MS", serif;
     font-size: 18px;
     width:35%;
     padding: 20px;
     font-weight:bold;
-    z-index:-1;
     border-radius: 50px;
 }
 /*mapa+kontakt*/
@@ -36,7 +34,7 @@
     font-size: 24px;
     line-height:30px;
     padding:10px;
-    font-family: "Comic Sans MS",serif;
+
 }
 
 .zatvorene{
@@ -47,7 +45,6 @@
 /*odsek tabulka*/
 .tabulka{
     background-color: #b1cab4;
-    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 7%;
@@ -64,9 +61,10 @@ th{
     width: 80%;
     height: 180px;
     margin-left: 50%;
+    margin-bottom: 20px;
     transform: translate(-50%, 50%);
     text-align: center;
-    font-family: "Comic Sans MS", serif;
+
 }
 
 /*media queries*/

@@ -3,6 +3,7 @@ body {
     font-family: cursive,serif ;
     background-image: url("https://wallpaperaccess.com/full/666602.jpg");
 }
+
 /*menu*/
 li {
     display: inline-block;
@@ -17,7 +18,6 @@ li {
     width: 100%;
     margin: 0;
     top: 0;
-    left: 0;
 }
 
 /*podfarbenie*/
@@ -31,4 +31,11 @@ li  a {
     font-weight:bold;
     color: white;
     text-decoration: none;
+}
+
+/*media queries*/
+@media screen and (max-width: 800px) {
+    li  a {
+        font-size: 14px;
+    }
 }

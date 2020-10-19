@@ -2,8 +2,9 @@
 
 <link href ="menu.css" rel = "stylesheet">
 
+
 <div>
-    <img class="jedlo" src="http://www.castellhowellfoods.co.uk/wp-content/uploads/2014/06/F-reduced-to-clear.jpg" alt = "jedlo">
+    <img class="jedlo" src="./obrazky/jedlo.jpg" alt = "jedlo">
 </div>
 
 <h1 class="nazov">GOOD FOOD</h1>
@@ -27,5 +28,5 @@
 </p>
 
 <div class="burger">
-    <img class="burger" src="https://images.vexels.com/media/users/3/152351/isolated/preview/2f615e72ef2b153b5547f49fbb1f0ad6-burger-sketch-by-vexels.png" alt="burger">
+    <img class="burger" src="./obrazky/hamburger.png" alt="burger">
 </div>
