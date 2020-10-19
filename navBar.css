@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: cursive,serif ;
+    background-image: url("https://wallpaperaccess.com/full/666602.jpg");
+}
+/*menu*/
+li {
+    display: inline-block;
+    padding: 15px;
+    margin: 0;
+}
+
+/*farba hlavneho menu*/
+.nav {
+    background-color: #0000005c;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+/*podfarbenie*/
+li:hover {
+    background: forestgreen;
+}
+
+/*polozky v menu*/
+li  a {
+    font-size: 20px;
+    font-weight:bold;
+    color: white;
+    text-decoration: none;
+}

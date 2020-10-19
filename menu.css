@@ -1,0 +1,56 @@
+/*baner*/
+.jedlo{
+    width:100%;
+}
+
+/*logo*/
+.nazov{
+    position: absolute;
+    top: 0;
+    margin-left: 50%;
+    margin-top: 10%;
+    transform: translate(-50%, 50%);
+    color: white;
+    font-family: "Arial Black",serif;
+    font-size: 55px;
+}
+
+/*nadpis*/
+.Onas {
+    position: relative;
+    color: #cf2544;
+    text-indent: 3%;
+    font-family: "Comic Sans MS",serif;
+}
+
+/* O nas popis*/
+.popis{
+    width: 45%;
+    margin-left: 3%;
+    text-align: justify;
+    font-family: "Comic Sans MS",serif;
+}
+
+/*burger obrazok*/
+.burger{
+    margin-left: 36%;
+    margin-top: 21%;
+    position: absolute;
+    width: 60%;
+    top: 0;
+}
+
+/*media queries*/
+@media only screen and (max-width: 900px) {
+    .nazov{
+        font-size: 35px;
+    }
+    .popis{
+        width: 90%;
+    }
+    .burger{
+    position:static;
+        margin: 0;
+    }
+}
+
