@@ -26,7 +26,7 @@
         <button type="submit">Prihlásiť</button>
 
         <label>
-            <input type="checkbox" name="remember"> Zapamätať prihlásenie
+            <input type="checkbox"> Zapamätať prihlásenie
         </label>
     </div>
 
