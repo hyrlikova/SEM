@@ -1,6 +1,6 @@
 <?php include_once "header.php"?>
 
-<link href ="menu.css" rel = "stylesheet">
+
 
 
 <div>
@@ -30,3 +30,6 @@
 <div class="burger">
     <img class="burger" src="./obrazky/hamburger.png" alt="burger">
 </div>
+
+</body>
+</html>

@@ -1,12 +1,12 @@
 <?php include_once "header.php"?>
 
-<link href ="prihlasenie.css" rel = "stylesheet">
+
 
 
 <form action="menu.php" >
 
     <div class="avatar">
-        <img class="burger" src="./obrazky/burger.png" alt = "burger">
+        <img class="burgerAvatar" src="./obrazky/burger.png" alt = "burger">
     </div>
 
     <div class="formular">
@@ -31,3 +31,5 @@
     </div>
 
 </form>
+</body>
+</html>

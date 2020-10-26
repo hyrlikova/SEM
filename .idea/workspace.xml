@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:SEM" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f41271b-6538-4e9e-9abe-789612676519" name="Default Changelist" comment="V1">
-      <change afterPath="$PROJECT_DIR$/prihlasenie.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prihlasenie.php" afterDir="false" />
+    <list default="true" id="6f41271b-6538-4e9e-9abe-789612676519" name="Default Changelist" comment="V2">
+      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kontakt.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kosik.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kosik.php" beforeDir="false" afterPath="$PROJECT_DIR$/kosik.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nakup.css" beforeDir="false" afterPath="$PROJECT_DIR$/kosik.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nakup.php" beforeDir="false" afterPath="$PROJECT_DIR$/kosik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ponuka.css" beforeDir="false" afterPath="$PROJECT_DIR$/ponuka.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ponuka.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ponuka.php" beforeDir="false" afterPath="$PROJECT_DIR$/ponuka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prihlasenie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prihlasenie.php" beforeDir="false" afterPath="$PROJECT_DIR$/prihlasenie.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +82,14 @@
       <workItem from="1602408475380" duration="19405000" />
       <workItem from="1602568867929" duration="122000" />
       <workItem from="1602951913939" duration="303000" />
-      <workItem from="1603094876625" duration="11229000" />
+      <workItem from="1603094876625" duration="12291000" />
+      <workItem from="1603108050657" duration="407000" />
+      <workItem from="1603111493796" duration="2223000" />
+      <workItem from="1603183418609" duration="468000" />
+      <workItem from="1603204306779" duration="150000" />
+      <workItem from="1603204701487" duration="58000" />
+      <workItem from="1603377199892" duration="136000" />
+      <workItem from="1603728784527" duration="2213000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <created>1603095323798</created>
@@ -73,15 +98,49 @@
       <option name="project" value="LOCAL" />
       <updated>1603095323798</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="V2">
+      <created>1603106455465</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603106455465</updated>
+    </task>
+    <task id="LOCAL-00003" summary="V2">
+      <created>1603106518757</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603106518757</updated>
+    </task>
+    <task id="LOCAL-00004" summary="V2">
+      <created>1603204333592</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603204333592</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="V1" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1" />
+    <MESSAGE value="V2" />
+    <option name="LAST_COMMIT_MESSAGE" value="V2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="325" y="23" key="#CLI_Interpreters" timestamp="1602324571532">
@@ -109,9 +168,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602324347475" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603095337055">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603204338838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603095337055" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603204338838" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603106677568">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1603106677568" />
   </component>
 </project>
