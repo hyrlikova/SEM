@@ -23,7 +23,7 @@
             <input type="password" placeholder="Zadajte heslo" required>
         </label>
 
-        <button type="submit">Prihlásiť</button>
+        <button class="prihlasitButton" type="submit">Prihlásiť</button>
 
         <label>
             <input type="checkbox"> Zapamätať prihlásenie

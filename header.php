@@ -19,10 +19,8 @@
             <li><a href="prihlasenie.php">Prihlásenie</a></li>
         </ul>
 
-        <!-- Simulate a smartphone / tablet -->
-        <div class="mobile-container">
 
-            <!-- Top Navigation Menu -->
+        <div class="mobile-container">
             <div class="topnav">
                 <a class="active"></a>
                 <div id="myLinks">
@@ -32,13 +30,9 @@
                     <a href="kontakt.php">Kontakt</a>
                     <a href="prihlasenie.php">Prihlásenie</a>
                 </div>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
             </div>
 
-
-            <!-- End smartphone / tablet look -->
         </div>
 
         <script>
