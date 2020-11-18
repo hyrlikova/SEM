@@ -5,11 +5,12 @@ require "Product.php";
 require "DBStorage.php";
 
 
-
-
 //$storage = new FileStorage();
 $storage = new DBStorage();
 
+if(isset($_POST['id'])) {
+    $storage->Remove();
+}
 ?>
 
 
@@ -21,13 +22,19 @@ $storage = new DBStorage();
                 <tr>
                     <th class="oramovanieKosik"><?php echo $product->getTitle() ?></th>
                     <th class="oramovanieKosik"></th>
+
                     <form method="post" class="remove">
+                        <?php echo $id = $product->getId()?>
+
+                        <input type="hidden" name="id" value="<?$id?>">
+
                         <th class="oramovanieKosik"><?php echo $product->getText(), "0&#8364" ?>
 
-                            <button type="submit" value="Submit" class="tlacidlo">
+                            <button type="submit" value="Submit" class="tlacidlo" >
                                 <img class="trash"
                                      src="https://www.freeiconspng.com/uploads/remove-icon-png-31.png"
                                      alt="trash">
+
                             </button>
 
                         </th>

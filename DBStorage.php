@@ -19,7 +19,7 @@ class DBStorage
         $r = $this->pdo->query("SELECT * FROM products");
 
         foreach ($r as $item) {
-            $result[] = new Product($item['name'], $item['price']);
+            $result[] = new Product($item['name'], $item['price'], $item['id']);
 
         }
 
@@ -36,9 +36,11 @@ class DBStorage
         header("Location: http://localhost:63342/SEM/kosik.php");
     }
 
-    public function Remove ()
+    public function Remove (Product $param)
     {
-
+        $produkt = $this->pdo->prepare("DELETE  FROM products where id value (?)");
+        $produkt->execute([$param->getTitle()]);
+       // $row = $produkt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function Price()

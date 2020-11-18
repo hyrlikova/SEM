@@ -5,20 +5,22 @@ class Product
 {
     private $name;
     private $price;
+    private $id;
 
     /**
      * Article constructor.
      * @param $name
      * @param $price
      */
-    public function __construct($name, $price)
+    public function __construct($name, $price,$id)
     {
         $this->name = $name;
         $this->price = $price;
+        $this->id = $id;
     }
 
-    public function __destruct(){
-
+    public function getId(){
+    return $this->id;
     }
 
     /**
