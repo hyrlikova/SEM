@@ -12,7 +12,7 @@ class Product
      * @param $name
      * @param $price
      */
-    public function __construct($name, $price,$id)
+    public function __construct($name, $price, $id)
     {
         $this->name = $name;
         $this->price = $price;

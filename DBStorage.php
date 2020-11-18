@@ -39,7 +39,7 @@ class DBStorage
     public function Remove (Product $param)
     {
         $produkt = $this->pdo->prepare("DELETE  FROM products where id value (?)");
-        $produkt->execute([$param->getTitle()]);
+        $produkt->execute([$param->getId()]);
        // $row = $produkt->fetch(PDO::FETCH_ASSOC);
     }
 

@@ -8,8 +8,8 @@ require "DBStorage.php";
 //$storage = new FileStorage();
 $storage = new DBStorage();
 
-if(isset($_POST['id'])) {
-    $storage->Remove();
+if (isset($_POST['id'])) {
+    $storage->Remove($_POST['id']);
 }
 ?>
 
@@ -24,9 +24,9 @@ if(isset($_POST['id'])) {
                     <th class="oramovanieKosik"></th>
 
                     <form method="post" class="remove">
-                        <?php echo $id = $product->getId()?>
+                        <?php echo $product->getId()?>
 
-                        <input type="hidden" name="id" value="<?$id?>">
+                        <input type="hidden" name="id" value="<?$product->getId()?>">
 
                         <th class="oramovanieKosik"><?php echo $product->getText(), "0&#8364" ?>
 
