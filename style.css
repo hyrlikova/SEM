@@ -4,10 +4,6 @@ body {
     background-image: url("https://wallpaperaccess.com/full/666602.jpg");
 }
 
-img{
-    width: 100%;
-    height: auto;
-}
 
 /*menu*/
 li {
@@ -348,7 +344,6 @@ th{
     margin-bottom: 20px;
     transform: translate(-50%, 50%);
     text-align: center;
-
 }
 
 /*media queries*/
@@ -371,6 +366,7 @@ th{
     }
 
 }
+/* nakupny kosik css*/
 
 .tlacidlo {
     font-family: cursive, serif;
@@ -378,7 +374,6 @@ th{
     color: black;
     border: none;
     cursor: pointer;
-
 }
 
 .obsah{
@@ -387,21 +382,17 @@ th{
     margin-top: 10%;
     text-align: left;
     width: 30%;
-
-
 }
 
 .kontainerKosik,.kontainerSuma{
     display: flex;
     justify-content: center;
-
 }
 
 .tabulkaKosik{
     margin: auto;
     width: 100%;
     table-layout: fixed;
-
 }
 
 .suma{
@@ -415,7 +406,6 @@ th{
 
 .oramovanieKosik{
     text-align: left;
-
 }
 
  .trash{

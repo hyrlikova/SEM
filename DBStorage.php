@@ -32,6 +32,8 @@ class DBStorage
     {
         $statement = $this->pdo->prepare("INSERT INTO products (name , price) value (?,?)");
         $statement->execute([$param->getTitle(), $param->getText()]);
+
+        header("Location: http://localhost:63342/SEM/kosik.php");
     }
 
     public function Remove ()

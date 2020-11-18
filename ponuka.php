@@ -3,8 +3,7 @@
 <?php
 require "Product.php";
 require "DBStorage.php";
-require "IStorage.php";
-require "FileStorage.php";
+
 
 
 //$storage = new FileStorage();
