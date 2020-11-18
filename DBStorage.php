@@ -36,21 +36,18 @@ class DBStorage
         header("Location: http://localhost:63342/SEM/kosik.php");
     }
 
-    public function Remove (Product $param)
+    public function Remove ($param)
     {
-        $produkt = $this->pdo->prepare("DELETE  FROM products where id value (?)");
-        $produkt->execute([$param->getId()]);
-       // $row = $produkt->fetch(PDO::FETCH_ASSOC);
+        $produkt = $this->pdo->prepare("DELETE  FROM products where id = $param");
+        $produkt->execute();
     }
 
     public function Price()
     {
-
         $suma = $this->pdo->prepare("SELECT sum(price) AS cena  FROM products");
         $suma->execute();
         $row = $suma->fetch(PDO::FETCH_ASSOC);
         echo number_format($row['cena'], 2, '.', ''), "&#8364";
-
     }
 
 

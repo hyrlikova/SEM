@@ -7,16 +7,15 @@ require "DBStorage.php";
 
 //$storage = new FileStorage();
 $storage = new DBStorage();
-
 if (isset($_POST['id'])) {
     $storage->Remove($_POST['id']);
 }
+
 ?>
 
 
 <div class="kontainerKosik">
     <div class="obsah">
-
         <?php foreach ($storage->LoadAll() as $product) { ?>
             <table class="tabulkaKosik">
                 <tr>
@@ -24,17 +23,15 @@ if (isset($_POST['id'])) {
                     <th class="oramovanieKosik"></th>
 
                     <form method="post" class="remove">
-                        <?php echo $product->getId()?>
 
-                        <input type="hidden" name="id" value="<?$product->getId()?>">
 
+                        <input type="hidden" name="id" value="<?php echo $product->getId()?>">
                         <th class="oramovanieKosik"><?php echo $product->getText(), "0&#8364" ?>
 
-                            <button type="submit" value="Submit" class="tlacidlo" >
+                            <button type="submit" value="Submit" class="tlacidlo">
                                 <img class="trash"
                                      src="https://www.freeiconspng.com/uploads/remove-icon-png-31.png"
                                      alt="trash">
-
                             </button>
 
                         </th>
