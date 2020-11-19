@@ -381,7 +381,7 @@ th{
     background-color: white;
     margin-top: 10%;
     text-align: left;
-    width: 30%;
+    width: 40%;
 }
 
 .kontainerKosik,.kontainerSuma{
@@ -401,7 +401,7 @@ th{
     border: 5px solid black;
     background-color: white;
     text-align: center;
-    width: 30%;
+    width: 40%;
 }
 
 .oramovanieKosik{
@@ -419,4 +419,29 @@ th{
 
 .remove{
     width: 10px;
+}
+
+/*poznamka*/
+
+
+textarea{
+    resize: none;
+    width: 50%;
+    height: 100px;
+
+}
+.note{
+    width: 50%;
+
+
+}
+
+.obalovacNote{
+    display: flex;
+    justify-content: center;
+}
+
+.textNote{
+    margin-left: 33%;
+    margin-top: 10%;
 }

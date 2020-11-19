@@ -19,7 +19,7 @@ class DBStorage
         $r = $this->pdo->query("SELECT * FROM products");
 
         foreach ($r as $item) {
-            $result[] = new Product($item['name'], $item['price'], $item['id']);
+            $result[] = new Product($item['name'], $item['price'], $item['id'], $item['note']);
 
         }
 
@@ -48,6 +48,22 @@ class DBStorage
         $suma->execute();
         $row = $suma->fetch(PDO::FETCH_ASSOC);
         echo number_format($row['cena'], 2, '.', ''), "&#8364";
+    }
+
+
+    public function redirect()
+    {
+
+        header("Location: http://localhost:63342/SEM/poznamka.php");
+    }
+
+    public function Update($param)
+    {
+
+        $statement = $this->pdo->prepare("UPDATE products SET note=$param WHERE id=46");
+        $statement->execute();
+
+        header("Location: http://localhost:63342/SEM/kosik.php");
     }
 
 

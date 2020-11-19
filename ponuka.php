@@ -10,7 +10,7 @@ require "DBStorage.php";
 $storage = new DBStorage();
 
 if (isset($_POST['name'])) {
-    $storage->Save(new Product($_POST['name'], $_POST['price'], $_GET['id']));
+    $storage->Save(new Product($_POST['name'], $_POST['price'], $_GET['id'], $_POST['note']));
 }
 
 ?>

@@ -6,17 +6,35 @@ class Product
     private $name;
     private $price;
     private $id;
+    private $note;
 
     /**
      * Article constructor.
      * @param $name
      * @param $price
      */
-    public function __construct($name, $price, $id)
+    public function __construct($name, $price, $id, $note)
     {
         $this->name = $name;
         $this->price = $price;
         $this->id = $id;
+        $this->note = $note;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    /**
+     * @param mixed $note
+     */
+    public function setNote($note)
+    {
+        $this->note = $note;
     }
 
     public function getId(){
