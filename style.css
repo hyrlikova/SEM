@@ -6,7 +6,7 @@ body {
 
 
 /*menu*/
-li {
+.linav {
     display: inline-block;
     margin: 0;
     padding: 15px;
@@ -368,6 +368,13 @@ th{
 }
 /* nakupny kosik css*/
 
+
+.kontainerKosik{
+    display: flex;
+    justify-content: space-around;
+
+}
+
 .tlacidlo {
     font-family: cursive, serif;
     background-color: unset;
@@ -380,61 +387,67 @@ th{
     border: 5px solid black;
     background-color: white;
     margin-top: 10%;
-    text-align: left;
-    width: 100%;
+
 }
 
-.kontainerKosik,.kontainerSuma{
-    display: flex;
-    justify-content: center;
-}
-
-.tabulkaKosik{
-    margin: auto;
-    width: 100%;
-    table-layout: fixed;
-}
 
 .suma{
     font-weight: bold;
     margin-top: 5px;
     border: 5px solid black;
     background-color: white;
-    text-align: center;
-    width: 40%;
+    width: 69%;
+
+
 }
 
 .oramovanieKosik{
     text-align: left;
+
 }
 
- .trash{
-     width: 10px;
-     cursor: pointer;
- }
+.trash{
+    width: 10px;
+    cursor: pointer;
+}
 
 .trash:hover{
     transform: scale(1.3);
 }
 
-.remove{
-    width: 10px;
+
+.note{
+    width:200px;
 }
 
-/*poznamka*/
-
-
-.note {
-    width: 50%;
-    height: 200px;
+th{
+    width:250px;
+    text-align: right;
 }
 
-.obalovacNote{
-    display: flex;
-    justify-content: center;
+.ks{
+    text-align: right;
 }
 
-.textNote{
-    margin-left: 33%;
-    margin-top: 10%;
+
+.spolu{
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+
+}
+
+.od{
+    margin-left: 73%;
+}
+
+.lavo{
+    margin-left: 2%;
+}
+
+.zle{
+    display: none;
+    margin-top: 5%;
+    color: red;
+    text-align: center;
 }

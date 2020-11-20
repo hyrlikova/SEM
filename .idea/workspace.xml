@@ -19,13 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f41271b-6538-4e9e-9abe-789612676519" name="Default Changelist" comment="V7">
+    <list default="true" id="6f41271b-6538-4e9e-9abe-789612676519" name="Default Changelist" comment="check2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/DBStorage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kosik.php" beforeDir="false" afterPath="$PROJECT_DIR$/kosik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poznamka.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prihlasenie.php" beforeDir="false" afterPath="$PROJECT_DIR$/prihlasenie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +104,7 @@
       <workItem from="1605438493820" duration="4000000" />
       <workItem from="1605708554896" duration="19512000" />
       <workItem from="1605802457464" duration="9990000" />
-      <workItem from="1605864794117" duration="8382000" />
+      <workItem from="1605864794117" duration="24626000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <created>1603095323798</created>
@@ -193,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605814763370</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="check2">
+      <created>1605873235383</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605873235383</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +223,8 @@
     <MESSAGE value="V5" />
     <MESSAGE value="V6" />
     <MESSAGE value="V7" />
-    <option name="LAST_COMMIT_MESSAGE" value="V7" />
+    <MESSAGE value="check2" />
+    <option name="LAST_COMMIT_MESSAGE" value="check2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="325" y="23" key="#CLI_Interpreters" timestamp="1602324571532">
@@ -304,11 +309,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605365654030" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605814765352">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2371" y="183" key="Vcs.Push.Dialog.v2" timestamp="1605873237083">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605733552916" />
-    <state x="2371" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603800815891" />
+    <state x="2371" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605873237083" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605814765352" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605346404836">
       <screen x="0" y="0" width="1536" height="824" />
@@ -318,10 +323,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="611" y="299" width="314" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605346220126" />
-    <state x="446" y="132" width="466" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605869672384">
+    <state x="446" y="132" width="466" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605890096598">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="446" y="132" width="466" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605869672384" />
+    <state x="446" y="132" width="466" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605890096598" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603106677568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
