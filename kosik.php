@@ -10,16 +10,14 @@ $storage = new DBStorage();
 
 if (isset($_POST['id'])) {
     $storage->Remove($_POST['id']);
+} else {
+
+    if (isset($_GET['id']) && isset($_GET['note'])) {
+        $storage->Update($_GET['note'], ($_GET['id']));
+    }
 }
 
-if (isset($_POST['poznamka'])) {
-     $storage->redirect();}
-
-
 ?>
-
-
-
 
 
 <div class="kontainerKosik">
@@ -34,7 +32,7 @@ if (isset($_POST['poznamka'])) {
                     <form method="post" class="remove">
 
 
-                        <input type="hidden" name="id" value="<?php echo $product->getId()?>">
+                        <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
                         <th class="oramovanieKosik"><?php echo $product->getText(), "0&#8364" ?>
 
 
@@ -45,16 +43,20 @@ if (isset($_POST['poznamka'])) {
 
                             </button>
                     </form>
-                            <form method="post" class="update">
 
-                                <input type="hidden" name="poznamka" value="<?php echo $product->getId()?>">
-                                <button type="submit" value="Submit" class="tlacidlo" >
-                                    <a href="poznamka.php" > <img class="trash" src="https://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon-14.png" alt="pero" ></a>
+                    <form method="get" class="update">
 
-                                </button>
-                            </form>
+                        <input type="text" name="note" value="<?php echo $product->getNote() ?>">
+                        <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
 
-                        </th>
+                        <button type="submit" value="Submit" class="tlacidlo">
+                            <img class="trash"
+                                 src="https://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon-14.png"
+                                 alt="pero">
+                        </button>
+                    </form>
+
+                    </th>
 
 
                 </tr>

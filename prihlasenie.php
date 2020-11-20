@@ -14,13 +14,13 @@
         <label><b>Meno</b></label>
 
         <label>
-            <input type="text" placeholder="Zadajte email" required>
+            <input class="meno" type="text" placeholder="Zadajte email" required>
         </label>
 
         <label><b>Heslo</b></label>
 
         <label>
-            <input type="password" placeholder="Zadajte heslo" required>
+            <input class="meno" type="password" placeholder="Zadajte heslo" required>
         </label>
 
         <button class="prihlasitButton" type="submit">Prihlásiť</button>

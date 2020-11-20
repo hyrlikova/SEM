@@ -6,12 +6,14 @@ class Product
     private $name;
     private $price;
     private $id;
-    private $note;
+    private $note = "";
 
     /**
      * Article constructor.
      * @param $name
      * @param $price
+     * @param $id
+     * @param $note
      */
     public function __construct($name, $price, $id, $note)
     {
@@ -37,6 +39,9 @@ class Product
         $this->note = $note;
     }
 
+    /**
+     * @return mixed
+     */
     public function getId(){
     return $this->id;
     }

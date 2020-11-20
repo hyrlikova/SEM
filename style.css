@@ -232,7 +232,7 @@ li  a {
 }
 
 /*zadavanie mena hesla*/
-input[type=text], input[type=password] {
+.meno {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -381,7 +381,7 @@ th{
     background-color: white;
     margin-top: 10%;
     text-align: left;
-    width: 40%;
+    width: 100%;
 }
 
 .kontainerKosik,.kontainerSuma{
@@ -424,16 +424,9 @@ th{
 /*poznamka*/
 
 
-textarea{
-    resize: none;
+.note {
     width: 50%;
-    height: 100px;
-
-}
-.note{
-    width: 50%;
-
-
+    height: 200px;
 }
 
 .obalovacNote{

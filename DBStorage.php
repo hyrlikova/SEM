@@ -36,11 +36,6 @@ class DBStorage
         header("Location: http://localhost:63342/SEM/kosik.php");
     }
 
-    public function Remove ($param)
-    {
-        $produkt = $this->pdo->prepare("DELETE  FROM products where id = $param");
-        $produkt->execute();
-    }
 
     public function Price()
     {
@@ -50,18 +45,22 @@ class DBStorage
         echo number_format($row['cena'], 2, '.', ''), "&#8364";
     }
 
-
     public function redirect()
     {
-
         header("Location: http://localhost:63342/SEM/poznamka.php");
     }
 
-    public function Update($param)
+
+    public function Remove ($param)
+    {
+        $produkt = $this->pdo->prepare("DELETE  FROM products where id = $param");
+        $produkt->execute();
+    }
+
+    public function Update($text,$id)
     {
 
-        $statement = $this->pdo->prepare("UPDATE products SET note=$param WHERE id=46");
-        $statement->execute();
+     $this->pdo->query("UPDATE products SET note='$text' WHERE id=$id");
 
         header("Location: http://localhost:63342/SEM/kosik.php");
     }
