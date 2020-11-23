@@ -49,7 +49,7 @@ class Product
     /**
      * @return mixed
      */
-    public function getTitle()
+    public function getNazov()
     {
         return $this->name;
     }
@@ -57,7 +57,7 @@ class Product
     /**
      * @param mixed $name
      */
-    public function setTitle($name)
+    public function setNazov($name)
     {
         $this->name = $name;
     }
@@ -65,7 +65,7 @@ class Product
     /**
      * @return mixed
      */
-    public function getText()
+    public function getCena()
     {
         return $this->price;
     }
@@ -73,7 +73,7 @@ class Product
     /**
      * @param mixed $price
      */
-    public function setText($price)
+    public function setCena($price)
     {
         $this->price = $price;
     }

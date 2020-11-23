@@ -19,11 +19,11 @@ if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $
     <div class="zle" id="demo"></div>
 
     <script>
-        function myFunction() {
+        function poznamkaFunction() {
             alert("Poznamka nesmie zacinat cislom!");
         }
 
-        document.getElementById("demo").innerHTML = myFunction();
+        document.getElementById("demo").innerHTML = poznamkaFunction();
     </script>
 <?php } ?>
 
@@ -36,7 +36,7 @@ if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $
         <?php foreach ($storage->LoadAll() as $product) { ?>
             <table class="tabulkaKosik">
                 <tr>
-                    <th class="oramovanieKosik"><?php echo $product->getTitle() ?></th>
+                    <th class="oramovanieKosik"><?php echo $product->getNazov() ?></th>
                     <th class="oramovanieKosik">
                         <form method="get" class="update">
 
@@ -55,7 +55,7 @@ if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $
 
                         <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
                         <th class="oramovanieKosik ks">
-                            <?php echo $product->getText(), "0&#8364" ?>
+                            <?php echo $product->getCena(), "0&#8364" ?>
 
                             <button type="submit" value="Submit" class="tlacidlo">
                                 <img class="trash"

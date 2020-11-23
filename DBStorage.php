@@ -31,7 +31,7 @@ class DBStorage
     public function Save(Product $param)
     {
         $statement = $this->pdo->prepare("INSERT INTO products (name , price) value (?,?)");
-        $statement->execute([$param->getTitle(), $param->getText()]);
+        $statement->execute([$param->getNazov(), $param->getCena()]);
 
         header("Location: http://localhost:63342/SEM/kosik.php");
     }
