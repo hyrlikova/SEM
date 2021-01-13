@@ -14,6 +14,7 @@ if (isset($_POST['id'])) {
 
 if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $_GET['note']))) {
     $storage->Update($_GET['note'], ($_GET['id']));
+
 } else if ((isset($_GET['id'])) && (isset($_GET['note'])) && (preg_match("/^[0-9]/", $_GET['note']))) {
     ?>
     <div class="zle" id="demo"></div>
@@ -40,14 +41,17 @@ if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $
                     <th class="oramovanieKosik">
                         <form method="get" class="update">
 
-                            <input class="note" type="text" name="note" value="<?php echo $product->getNote() ?>" maxlength="100">
-                            <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
+                            <input class="note" id="<?php echo $product->getId() ?>" type="text" name="note" value="<?php echo $product->getNote() ?>" maxlength="100">
+                            <input type="hidden"  name="id" value="<?php echo $product->getId() ?>">
 
-                            <button type="submit" value="Submit" class="tlacidlo">
+                            <button type="submit" value="Submit" onclick="myFunction()" class="tlacidlo">
                                 <img class="trash"
                                      src="https://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon-14.png"
                                      alt="pero">
                             </button>
+
+
+
                         </form>
                     </th>
 
@@ -81,5 +85,35 @@ if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $
         </div>
 
     </div>
-</div>>
+</div>
+<div class="kontainerKosikBtnObjednat">
 
+    <div id="demo">
+    <button type="button" onclick="loadDoc()" class="btnObjednat">Change Content</button>
+    </div>
+</div>
+
+
+<script>
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML =
+                    this.responseText;
+            }
+        };
+        xhttp.open("POST", "ajax_info", true);
+        xhttp.send();
+    }
+</script>
+
+
+<script>
+    function myFunction() {
+        <?php foreach ($storage->LoadAll() as $product){ ?>
+        document.getElementById("<?php echo $product->getId() ?>").style.backgroundColor = "#92f895";
+   <?php } ?>
+    }
+
+</script>

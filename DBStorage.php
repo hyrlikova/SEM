@@ -36,6 +36,14 @@ class DBStorage
         header("Location: http://localhost:63342/SEM/kosik.php");
     }
 
+    public function SaveUser(User $param)
+    {
+        $statement = $this->pdo->prepare("INSERT INTO users (email,heslo,adresa,mobil) value (?,?,?,?)");
+        $statement->execute([$param->getEmail(), $param->getHeslo(),$param->getAdresa(),$param->getMobil()]);
+
+        //header("Location: http://localhost:63342/SEM/prihlasenie.php");
+    }
+
 
     public function Price()
     {
@@ -47,7 +55,7 @@ class DBStorage
 
     public function redirect()
     {
-        header("Location: http://localhost:63342/SEM/poznamka.php");
+        header("Location: http://localhost:63342/SEM/prihlasenie.php");
     }
 
 

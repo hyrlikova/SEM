@@ -1,8 +1,5 @@
 <?php include_once "header.php"?>
 
-
-
-
 <form action="menu.php" >
 
     <div class="avatar">
@@ -25,11 +22,15 @@
 
         <button class="prihlasitButton" type="submit">Prihlásiť</button>
 
-        <label>
-            <input type="checkbox"> Zapamätať prihlásenie
-        </label>
     </div>
 
 </form>
+
+<div class="formular" >
+    <a href="registracia.php"> <button class="registerButton" type="submit">Registrovať</button> </a>
+</div>
+
+
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: cursive,serif ;
+    font-family: cursive, serif;
     background-image: url("https://wallpaperaccess.com/full/666602.jpg");
 }
 
@@ -24,8 +24,8 @@ body {
     height: 60px;
 }
 
-.mobile-container{
-   display: none;
+.mobile-container {
+    display: none;
 }
 
 /*podfarbenie*/
@@ -34,19 +34,20 @@ li:hover {
 }
 
 /*polozky v menu*/
-li  a {
+li a {
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
     color: white;
     text-decoration: none;
 }
 
 /*media queries*/
 @media screen and (max-width: 800px) {
-    .nav{
+    .nav {
         visibility: hidden;
     }
-    li{
+
+    li {
         visibility: hidden;
     }
 
@@ -89,19 +90,19 @@ li  a {
 }
 
 /*baner*/
-.jedlo{
-    width:100%;
+.jedlo {
+    width: 100%;
 }
 
 /*logo*/
-.nazov{
+.nazov {
     position: absolute;
     top: 0;
     margin-left: 50%;
     margin-top: 10%;
     transform: translate(-50%, 50%);
     color: white;
-    font-family: "Comic Sans MS",serif;
+    font-family: "Comic Sans MS", serif;
     font-size: 55px;
 }
 
@@ -112,14 +113,14 @@ li  a {
 }
 
 /* O nas popis*/
-.popis{
+.popis {
     width: 45%;
     margin-left: 3%;
     text-align: justify;
 }
 
 /*burger obrazok*/
-.burger{
+.burger {
     margin-left: 36%;
     margin-top: 21%;
     position: absolute;
@@ -129,22 +130,25 @@ li  a {
 
 /*media queries*/
 @media only screen and (max-width: 900px) {
-    .nazov{
+    .nazov {
         font-size: 35px;
     }
-    .popis{
+
+    .popis {
         width: 90%;
     }
-    .burger{
-        position:static;
+
+    .burger {
+        position: static;
         margin: 0;
     }
-    .nazov{
+
+    .nazov {
         display: none;
     }
 }
 
-.ponuka{
+.ponuka {
     margin-top: 5%;
     width: 100%;
 }
@@ -167,27 +171,27 @@ li  a {
     z-index: 0;
 }
 
-.obrJedlo{
+.obrJedlo {
     width: 100%;
     border-radius: 13px;
 }
 
 
 /*pomenovanie*/
-.produkt{
+.produkt {
     text-decoration: underline;
     text-align: center;
     font-size: 20px;
 }
 
 /*zvacsenie pomenovania*/
-.produkt:hover{
+.produkt:hover {
     transform: scale(1.3);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /*kosik ikona*/
-.kosik{
+.kosik {
     width: 25px;
 }
 
@@ -198,11 +202,11 @@ li  a {
         padding: 10%;
     }
 
-    .obrJedlo{
+    .obrJedlo {
         width: 270px;
     }
 
-    .produkt{
+    .produkt {
         font-size: 20px;
     }
 
@@ -210,7 +214,7 @@ li  a {
 
 @media only screen and (max-width: 1055px) {
     .stlpec h2 {
-        font-size:1em ;
+        font-size: 1em;
     }
 }
 
@@ -220,7 +224,7 @@ li  a {
         padding: 0;
     }
 
-    .obrJedlo{
+    .obrJedlo {
         width: 270px;
     }
 }
@@ -242,28 +246,29 @@ li  a {
 }
 
 /*prihlasit button*/
-.prihlasitButton {
-    font-family: cursive,serif;
+.prihlasitButton, .registerButton {
+    font-family: cursive, serif;
     background-color: #4caf50;
     color: white;
-    padding: 14px 20px;
+    padding: 9px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
 }
 
+
 .prihlasitButton:hover {
     opacity: 0.9;
 }
 
 /*burger avatar*/
-.avatar{
+.avatar {
     text-align: center;
     margin-top: 7%;
 }
 
-.burgerAvatar{
+.burgerAvatar {
     width: 12%;
     padding: 3%;
     background-color: #cf2544;
@@ -273,13 +278,13 @@ li  a {
 
 /*media queries*/
 @media screen and (max-width: 800px) {
-    .avatar{
+    .avatar {
         margin-top: 20%;
     }
 }
 
 /*google mapa*/
-.mapa{
+.mapa {
     border-style: solid;
     width: 315px;
     height: 265px;
@@ -287,55 +292,55 @@ li  a {
 }
 
 /*kontakt blok*/
-.kontakt{
-    line-height:50px;
+.kontakt {
+    line-height: 50px;
     background-color: #a5c9ca;
     font-size: 18px;
-    width:35%;
+    width: 35%;
     padding: 20px;
-    font-weight:bold;
+    font-weight: bold;
     border-radius: 50px;
 }
 
 /*mapa+kontakt*/
-.kontainer{
+.kontainer {
     display: flex;
     justify-content: space-around;
     margin-top: 10%;
 }
 
 /*ikony pri kontaktoch*/
-.icon{
+.icon {
     width: 5%;
 }
 
 /*prevadzka*/
-.hodiny{
+.hodiny {
     font-size: 24px;
-    line-height:30px;
-    padding:10px;
+    line-height: 30px;
+    padding: 10px;
 
 }
 
-.zatvorene{
+.zatvorene {
     text-align: center;
     font-weight: bold;
 }
 
 /*odsek tabulka*/
-.tabulka{
+.tabulka {
     background-color: #b1cab4;
     display: flex;
     justify-content: center;
     margin-top: 7%;
 }
 
-th{
-    padding:15px;
+th {
+    padding: 15px;
 }
 
 /* spodny blok*/
-.pata{
+.pata {
     background-color: #fbb273;
     padding-top: 20px;
     width: 80%;
@@ -352,7 +357,7 @@ th{
         display: block;
     }
 
-    .kontakt{
+    .kontakt {
         width: 100%;
         text-align: center;
         border-radius: 0;
@@ -360,21 +365,24 @@ th{
         padding: 0;
     }
 
-    .obalovac{
+    .obalovac {
         display: flex;
         justify-content: center;
     }
 
 }
+
 /* nakupny kosik css*/
 
 
-.kontainerKosik{
+.kontainerKosik, .kontainerKosikBtnObjednat{
     display: flex;
     justify-content: space-around;
 
 }
-
+.kontainerKosikBtnObjednat{
+    padding: 20px;
+}
 .tlacidlo {
     font-family: cursive, serif;
     background-color: unset;
@@ -383,7 +391,7 @@ th{
     cursor: pointer;
 }
 
-.obsah{
+.obsah {
     border: 5px solid black;
     background-color: white;
     margin-top: 10%;
@@ -391,7 +399,7 @@ th{
 }
 
 
-.suma{
+.suma {
     font-weight: bold;
     margin-top: 5px;
     border: 5px solid black;
@@ -401,51 +409,75 @@ th{
 
 }
 
-.oramovanieKosik{
+.oramovanieKosik {
     text-align: left;
 
 }
 
-.trash{
+.trash {
     width: 10px;
     cursor: pointer;
 }
 
-.trash:hover{
+.trash:hover {
     transform: scale(1.3);
 }
 
 
-.note{
-    width:200px;
+.note {
+    width: 200px;
 }
 
-th{
-    width:250px;
+th {
+    width: 250px;
     text-align: right;
 }
 
-.ks{
+.ks {
     text-align: right;
 }
 
 
-.spolu{
+.spolu {
     display: inline-block;
     text-align: right;
     font-weight: bold;
 
 }
 
-.od{
+.od {
     margin-left: 73%;
 }
 
-.lavo{
+.lavo {
     margin-left: 2%;
 }
 
-.zle{
+.zle {
     display: none;
 
+}
+
+
+/*registracia*/
+
+.kontajnerRegister {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.signupbtn {
+    cursor: pointer;
+    background-color: #cf2544;
+    border: solid black 2px;
+}
+
+
+.btnObjednat{
+    width: 100px;
+    cursor: pointer;
+    background-color: #4caf50;
+    border: solid black 2px;
 }
