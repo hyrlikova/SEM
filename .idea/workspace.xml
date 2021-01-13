@@ -19,15 +19,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f41271b-6538-4e9e-9abe-789612676519" name="Default Changelist" comment="check2Final">
-      <change afterPath="$PROJECT_DIR$/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ajax_info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registracia.php" afterDir="false" />
+    <list default="true" id="6f41271b-6538-4e9e-9abe-789612676519" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/FILE/prihlasenie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/DBStorage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kosik.php" beforeDir="false" afterPath="$PROJECT_DIR$/kosik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prihlasenie.php" beforeDir="false" afterPath="$PROJECT_DIR$/prihlasenie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/CLASS/DBStorage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/CLASS/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/CLASS/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/kontakt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kosik.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/kosik.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/burger.png" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/burger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/ceasar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/ceasar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/cestoviny.png" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/cestoviny.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/grecke-rizoto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/grecke-rizoto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/gyros.png" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/gyros.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/haloumi.png" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/haloumi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/hamburger.png" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/hamburger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/jedlo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/jedlo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/kuracie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/kuracie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/rodeo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/rodeo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/soup.png" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/soup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrazky/syr.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/IMG/syr.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ponuka.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/ponuka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prihlasenie.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registracia.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/registracia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +79,20 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CLASS" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\NATY\FRI\3.ročník\1.semester\Vývoj aplikácií pre internet a intranet\SEM\CLASS" />
+      <recent name="D:\NATY\FRI\3.ročník\1.semester\Vývoj aplikácií pre internet a intranet\SEM\FILE" />
+      <recent name="D:\NATY\FRI\3.ročník\1.semester\Vývoj aplikácií pre internet a intranet\SEM\CSS" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="DBStorage.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/DBStorage.php">
+    <configuration name="DBStorage.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/CLASS/DBStorage.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -111,7 +136,7 @@
       <workItem from="1605864794117" duration="34167000" />
       <workItem from="1606160648218" duration="464000" />
       <workItem from="1606201139039" duration="1760000" />
-      <workItem from="1610532150491" duration="17863000" />
+      <workItem from="1610532150491" duration="32156000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <created>1603095323798</created>
@@ -218,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606161097159</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update">
+      <created>1610550230631</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610550230631</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +278,8 @@
     <MESSAGE value="V7" />
     <MESSAGE value="check2" />
     <MESSAGE value="check2Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="check2Final" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="325" y="23" key="#CLI_Interpreters" timestamp="1602324571532">
@@ -273,10 +306,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605869351568" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1602324549150">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1610558255506">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1602240422604" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610558255506" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602324549150" />
     <state x="647" y="310" key="Github.ShareDialog" timestamp="1603095094219">
       <screen x="0" y="0" width="1536" height="824" />
@@ -330,19 +363,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="456" y="135" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610537684469" />
-    <state x="604" y="335" key="NewPhpFileDialog" timestamp="1610535246163">
+    <state x="604" y="335" key="NewPhpFileDialog" timestamp="1610558011126">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="335" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610535246163" />
+    <state x="604" y="335" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610558011126" />
     <state x="604" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602324347475" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1605365654030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605365654030" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606161099253">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610550232242">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1606161099253" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610550232242" />
     <state x="2371" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605873237083" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605814765352" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605346404836">
@@ -365,10 +398,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="320" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605368417063" />
-    <state x="2271" y="40" width="1085" height="812" key="dock-window-1" timestamp="1605358289365">
+    <state x="1939" y="32" width="1175" height="812" maximized="true" key="dock-window-1" timestamp="1610564546301">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2271" y="40" width="1085" height="812" key="dock-window-1/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605358289365" />
+    <state x="1939" y="32" width="1175" height="812" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610564546301" />
     <state x="1920" y="0" width="990" height="670" key="dock-window-2" timestamp="1605375283492">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

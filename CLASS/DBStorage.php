@@ -33,7 +33,7 @@ class DBStorage
         $statement = $this->pdo->prepare("INSERT INTO products (name , price) value (?,?)");
         $statement->execute([$param->getNazov(), $param->getCena()]);
 
-        header("Location: http://localhost:63342/SEM/kosik.php");
+        header("Location: http://localhost:63342/SEM/FILE/kosik.php");
     }
 
     public function SaveUser(User $param)
@@ -50,12 +50,12 @@ class DBStorage
         $suma = $this->pdo->prepare("SELECT sum(price) AS cena  FROM products");
         $suma->execute();
         $row = $suma->fetch(PDO::FETCH_ASSOC);
-        echo number_format($row['cena'], 2, '.', ''), "&#8364";
+        echo number_format($row['cena'], 2, '.', ''), "&#8364;";
     }
 
     public function redirect()
     {
-        header("Location: http://localhost:63342/SEM/prihlasenie.php");
+        header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php");
     }
 
 
@@ -70,7 +70,7 @@ class DBStorage
 
      $this->pdo->query("UPDATE products SET note='$text' WHERE id=$id");
 
-        header("Location: http://localhost:63342/SEM/kosik.php");
+        header("Location: http://localhost:63342/SEM/FILE/kosik.php");
     }
 
 

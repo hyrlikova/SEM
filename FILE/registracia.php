@@ -1,7 +1,19 @@
-<?php include_once "header.php";
+<!DOCTYPE html>
+<html lang="en">
 
-require "User.php";
-require "DBStorage.php";
+<head>
+    <meta name="author" content="Natalia Hyrlikova">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodFood</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href ="../CSS/style.css" rel = "stylesheet">
+</head>
+
+<body>
+<?php
+require "../CLASS/User.php";
+require "../CLASS/DBStorage.php";
 
 $storage = new DBStorage();
 
@@ -43,8 +55,11 @@ $storage->SaveUser(new User($_POST['email'], password_hash($_POST['heslo'],PASSW
             <div class="but">
 
                 <button type="submit" value="Submit" class="signupbtn">Registrovať</button>
+
             </div>
 
             </form>
+           <button onclick="window.location='prihlasenie.php'" class="cancelbtn">Zrušiť</button>
+
         </div>
     </div>

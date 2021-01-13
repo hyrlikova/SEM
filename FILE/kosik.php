@@ -1,8 +1,8 @@
 <?php include_once "header.php" ?>
 
 <?php
-require "Product.php";
-require "DBStorage.php";
+require "../CLASS/Product.php";
+require "../CLASS/DBStorage.php";
 
 
 //$storage = new FileStorage();
@@ -29,37 +29,44 @@ if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $
 <?php } ?>
 
 
+<div class="obalovacZoznamu">
+
+    <div class="zoznam">
 
 
-
-<div class="kontainerKosik">
-    <div class="obsah">
         <?php foreach ($storage->LoadAll() as $product) { ?>
-            <table class="tabulkaKosik">
-                <tr>
-                    <th class="oramovanieKosik"><?php echo $product->getNazov() ?></th>
-                    <th class="oramovanieKosik">
-                        <form method="get" class="update">
+            <div class="kontainerKosik">
 
-                            <input class="note" id="<?php echo $product->getId() ?>" type="text" name="note" value="<?php echo $product->getNote() ?>" maxlength="100">
-                            <input type="hidden"  name="id" value="<?php echo $product->getId() ?>">
 
-                            <button type="submit" value="Submit" onclick="myFunction()" class="tlacidlo">
+                <div class="obsah">
+
+
+                    <div class="oramovanieKosik"><?php echo $product->getNazov() ?></div>
+
+
+                    <form method="get" class="update">
+                        <div class="oramovanieKosik">
+
+                            <input class="note" id="<?php echo $product->getId() ?>" type="text" name="note"
+                                   value="<?php echo $product->getNote() ?>" maxlength="100">
+                            <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
+
+                            <button type="submit" value="Submit" onclick="funUpdateSucc()" class="tlacidlo">
                                 <img class="trash"
                                      src="https://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon-14.png"
                                      alt="pero">
                             </button>
 
+                        </div>
 
+                    </form>
 
-                        </form>
-                    </th>
 
                     <form method="post" class="remove">
 
                         <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
-                        <th class="oramovanieKosik ks">
-                            <?php echo $product->getCena(), "0&#8364" ?>
+                        <div class="oramovanieKosik ks">
+                            <?php echo $product->getCena(), "0&#8364;" ?>
 
                             <button type="submit" value="Submit" class="tlacidlo">
                                 <img class="trash"
@@ -68,28 +75,37 @@ if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $
                             </button>
 
 
-                        </th>
+                        </div>
                     </form>
-                </tr>
 
-            </table>
-
+                </div>
+            </div>
         <?php } ?>
 
-        <br>
-        <div class="spolu lavo">
-            Celková suma:
-        </div>
-        <div class="spolu od">
-            <?php $storage->Price(); ?>
+
+        <div class="obalovacSpolu">
+
+            <div class="spoluSuma">
+                Celková suma:
+            </div>
+
+            <div class="spoluSuma">
+            </div>
+
+            <div class="spoluSuma">
+                <?php $storage->Price(); ?>
+            </div>
+
         </div>
 
     </div>
 </div>
+
+
 <div class="kontainerKosikBtnObjednat">
 
     <div id="demo">
-    <button type="button" onclick="loadDoc()" class="btnObjednat">Change Content</button>
+        <button type="button" onclick="loadDoc()" class="btnObjednat">Objednať</button>
     </div>
 </div>
 
@@ -97,23 +113,23 @@ if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $
 <script>
     function loadDoc() {
         var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("demo").innerHTML =
                     this.responseText;
             }
         };
-        xhttp.open("POST", "ajax_info", true);
+        xhttp.open("POST", "../ajax_info", true);
         xhttp.send();
     }
 </script>
 
 
 <script>
-    function myFunction() {
+    function funUpdateSucc() {
         <?php foreach ($storage->LoadAll() as $product){ ?>
         document.getElementById("<?php echo $product->getId() ?>").style.backgroundColor = "#92f895";
-   <?php } ?>
+        <?php } ?>
     }
 
 </script>

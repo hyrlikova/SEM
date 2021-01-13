@@ -1,10 +1,10 @@
-<?php include_once "header.php"?>
+<?php include_once "header.php" ?>
 
 
 
 
 <div>
-    <img class="jedlo" src="./obrazky/jedlo.jpg" alt = "jedlo">
+    <img class="jedlo" src="../IMG/jedlo.jpg" alt = "jedlo">
 </div>
 
 <h1 class="nazov">GOOD FOOD</h1>
@@ -28,7 +28,7 @@
 </p>
 
 <div class="burger">
-    <img class="burger" src="./obrazky/hamburger.png" alt="burger">
+    <img class="burger" src="../IMG/hamburger.png" alt="burger">
 </div>
 
 </body>

@@ -1,4 +1,4 @@
-<?php include_once "header.php"?>
+<?php include_once "header.php" ?>
 
 
 
@@ -13,8 +13,7 @@
     <div class="obalovac">
         <div class="mapa">
             <iframe width="311" height="261"  id="gmap_canvas" src="https://maps.google.com/maps?width=311&amp;height=261&amp;hl=en&amp;q=Borov%C3%A1%203345/33%20%C5%BDilina+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-            <a href='https://www.symptoma.sk/sk/info/covid-19#info'>Mapa</a>
-            <script src='https://maps-generator.com/google-maps-authorization/script.js?id=fd55c889e0ace2e57e33d71665a65660ecd28d9d'></script>
+            <script src='https://maps.google.com/maps?q=Borov%C3%A1%203345/33&t=&z=15&ie=UTF8&iwloc=&output=embed'></script>
         </div>
     </div>
 </div>
