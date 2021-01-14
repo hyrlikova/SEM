@@ -16,7 +16,7 @@
             <li class="linav"><a href="ponuka.php">Ponuka</a></li>
             <li class="linav"><a href="kosik.php">Nakupný košík</a></li>
             <li class="linav"><a href="kontakt.php">Kontakt</a></li>
-            <li class="linav"><a href="prihlasenie.php">Odhlásiť!</a></li>
+            <li class="linav"><a href="odhlasenie.php">Odhlásiť!</a></li>
         </ul>
 
 
@@ -28,7 +28,7 @@
                     <a href="ponuka.php">Ponuka</a>
                     <a href="kosik.php">Nakupný košík</a>
                     <a href="kontakt.php">Kontakt</a>
-                    <a href="prihlasenie.php">Odhlásiť!</a>
+                    <a href="odhlasenie.php">Odhlásiť!</a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
             </div>

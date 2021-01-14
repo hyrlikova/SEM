@@ -12,7 +12,41 @@
 
 <body>
 
-<form action="menu.php">
+
+<?php
+
+session_start();
+require "../CLASS/User.php";
+require "../CLASS/DBStorage.php";
+
+$storage = new DBStorage();
+
+
+if (isset($_POST['email'], $_POST['heslo'])) {
+
+
+    if ($storage->PrihlasenieCheck($_POST['email'],$_POST['heslo']) == false) {
+
+        $_SESSION['user_email'] =$_POST['email'];
+
+        echo '<script type="text/javascript">';
+        echo 'window.location.href = "menu.php";';
+        echo 'alert("Prihlasenie prebehlo úspešne!");';
+        echo '</script>';
+
+
+    } else {
+        echo '<script type="text/javascript">';
+        echo 'window.location.href = "prihlasenie.php";';
+        echo 'alert("Nespravne meno alebo heslo!");';
+        echo '</script>';
+    }
+}
+
+?>
+
+
+<form method="post">
 
     <div class="avatar">
 
@@ -22,21 +56,15 @@
 
     <div class="formular">
 
+        <label for="email"><b>Meno</b></label>
+        <input id="email" class="meno" type="email" name="email" placeholder="Zadajte email" value="" required>
 
 
-            <label for="email"><b>Meno</b></label>
-                <input id="email" class="meno" type="email" placeholder="Zadajte email" required>
+        <label for="heslo"><b>Heslo</b></label>
+        <input  id="heslo" class="meno" type="password" placeholder="Zadajte heslo" name="heslo" value="" required>
 
 
-            <label><b>Heslo</b></label>
-
-            <label>
-                <input class="meno" type="password" placeholder="Zadajte heslo" required>
-            </label>
-
-                <button class="prihlasitButton" onclick="window.location='menu.php'" type="submit">Prihlásiť</button>
-
-
+        <button class="prihlasitButton" type="submit" value="Submit">Prihlásiť</button>
 
     </div>
 </form>
@@ -44,7 +72,7 @@
 
 <div class="formular">
 
-        <button class="registerButton" onclick="window.location='registracia.php'" type="submit">Registrovať</button>
+    <button class="registerButton" onclick="window.location='registracia.php'" type="submit">Registrovať</button>
 
 </div>
 
