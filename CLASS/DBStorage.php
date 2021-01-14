@@ -1,5 +1,7 @@
 <?php
 
+require "../FILE/utils.php";
+
 class DBStorage
 {
 
@@ -19,7 +21,7 @@ class DBStorage
         $r = $this->pdo->query("SELECT * FROM products WHERE userID = '$param'");
 
         foreach ($r as $item) {
-            $result[] = new Product($item['name'], $item['price'], $item['id'], $item['note'],$item['userID']);
+            $result[] = new Product($item['name'], $item['price'], $item['id'], $item['note'], $item['userID']);
 
         }
 
@@ -31,7 +33,7 @@ class DBStorage
     public function Save(Product $param)
     {
         $statement = $this->pdo->prepare("INSERT INTO products (name , price, userID) value (?,?,?)");
-        $statement->execute([$param->getNazov(), $param->getCena(),$param->getUserID()]);
+        $statement->execute([$param->getNazov(), $param->getCena(), $param->getUserID()]);
 
         header("Location: http://localhost:63342/SEM/FILE/kosik.php");
     }
@@ -45,10 +47,12 @@ class DBStorage
     }
 
 
-    public function Price()
+    public function Price($param)
     {
-        $suma = $this->pdo->prepare("SELECT sum(price) AS cena  FROM products");
-        $suma->execute();
+        $suma = $this->pdo->prepare("SELECT sum(price) AS cena  FROM products WHERE userID = :param");
+        $suma->execute(array(
+            ':param' => $param
+        ));
         $row = $suma->fetch(PDO::FETCH_ASSOC);
         echo number_format($row['cena'], 2, '.', ''), "&#8364;";
     }
@@ -92,16 +96,19 @@ class DBStorage
     }
 
 
-    public function PrihlasenieCheck($email,$heslo)
+    public function PrihlasenieCheck($email, $heslo)
     {
-        $userEmail = $this->pdo->prepare("SELECT email,heslo FROM users WHERE email = :email AND heslo = :heslo");
-
-        $userEmail->execute(array(':email' => $email,':heslo' => $heslo));
 
 
-        $foundUserE = $userEmail->fetchAll();
+        $userEmail = $this->pdo->prepare("SELECT count(heslo) AS cnt FROM users WHERE heslo = :hash");
 
-        if (empty($foundUserE)) {
+        $userEmail->execute(array(':hash'=>myHash($email,$heslo)));
+
+
+        $foundUserE = $userEmail->fetch(PDO::FETCH_ASSOC);
+
+
+        if ( $foundUserE['cnt'] == 1) {
             return true;
         }
 
@@ -109,10 +116,6 @@ class DBStorage
 
 
     }
-
-
-
-
 
 
 }

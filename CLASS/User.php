@@ -7,23 +7,23 @@ class User
     private $heslo;
     private $adresa;
     private $mobil;
-    private $id;
+    //private $id;
 
     /**
      * User constructor.
      * @param $email
      * @param $heslo
-     * @param $id
+    // * @param $id
      * @param $adresa
      * @param $mobil
      */
-    public function __construct($email, $heslo,$adresa, $mobil,$id)
+    public function __construct($email, $heslo,$adresa, $mobil)
     {
         $this->email = $email;
         $this->heslo = $heslo;
         $this->adresa = $adresa;
         $this->mobil = $mobil;
-        $this->id = $id;
+        //$this->id = $id;
     }
 
     /**
@@ -58,21 +58,6 @@ class User
         $this->heslo = $heslo;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
 
     /**
      * @return mixed

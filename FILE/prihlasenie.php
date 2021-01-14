@@ -19,20 +19,18 @@ session_start();
 require "../CLASS/User.php";
 require "../CLASS/DBStorage.php";
 
+
 $storage = new DBStorage();
 
 
 if (isset($_POST['email'], $_POST['heslo'])) {
 
 
-    if ($storage->PrihlasenieCheck($_POST['email'],$_POST['heslo']) == false) {
+    if ($storage->PrihlasenieCheck($_POST['email'],$_POST['heslo']) == true ) {
 
         $_SESSION['user_email'] = $_POST['email'];
 
-        echo '<script type="text/javascript">';
-        echo 'window.location.href = "menu.php";';
-        echo 'alert("Prihlasenie prebehlo úspešne!");';
-        echo '</script>';
+        header("Location: http://localhost:63342/SEM/FILE/menu.php");
 
 
     } else {

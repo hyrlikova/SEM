@@ -9,9 +9,6 @@ session_start();
 
 if (isset($_SESSION['user_email'])) {
 
-    echo $_SESSION['user_email'];
-
-//$storage = new FileStorage();
 $storage = new DBStorage();
 
 if (isset($_POST['name'])) {
@@ -182,4 +179,5 @@ if (isset($_POST['name'])) {
 </body>
 </html>
 
-<?php } ?>
+<?php } else
+    header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php");?>

@@ -1,7 +1,9 @@
-<?php include_once "header.php" ?>
+<?php include_once "header.php";
 
+session_start();
 
-
+if (isset($_SESSION['user_email'])) {
+?>
 
 <div>
     <img class="jedlo" src="../IMG/jedlo.jpg" alt = "jedlo">
@@ -33,3 +35,6 @@
 
 </body>
 </html>
+
+<?php } else
+    header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php");?>

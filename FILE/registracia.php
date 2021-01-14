@@ -29,7 +29,10 @@ if (isset($_POST['email'], $_POST['heslo'], $_POST['adresa'], $_POST['mobil'])) 
         echo '</script>';
 
     } else {
-        $storage->SaveUser(new User($_POST['email'], $_POST['heslo'], $_POST['adresa'], $_POST['mobil'], $_GET['id']));
+
+
+
+        $storage->SaveUser(new User($_POST['email'], myHash($_POST['email'],$_POST['heslo']), $_POST['adresa'], $_POST['mobil']));
 
         echo '<script type="text/javascript">';
         echo 'window.location.href = "prihlasenie.php";';

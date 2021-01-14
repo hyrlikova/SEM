@@ -9,7 +9,6 @@ session_start();
 
 if (isset($_SESSION['user_email'])) {
 
-
 //$storage = new FileStorage();
     $storage = new DBStorage();
 
@@ -98,7 +97,11 @@ if (isset($_SESSION['user_email'])) {
                 </div>
 
                 <div class="spoluSuma">
-                    <?php $storage->Price(); ?>
+                    <?php
+                    $storage->Price($_SESSION['user_email']);
+                    ?>
+
+
                 </div>
 
             </div>
@@ -139,5 +142,5 @@ if (isset($_SESSION['user_email'])) {
 
     </script>
 
-<?php }  else
-    header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php");?>
+<?php } else
+    header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php"); ?>
