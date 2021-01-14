@@ -4,13 +4,18 @@
 require "../CLASS/Product.php";
 require "../CLASS/DBStorage.php";
 
+session_start();
 
+
+if (isset($_SESSION['user_email'])) {
+
+    echo $_SESSION['user_email'];
 
 //$storage = new FileStorage();
 $storage = new DBStorage();
 
 if (isset($_POST['name'])) {
-    $storage->Save(new Product($_POST['name'], $_POST['price'], $_GET['id'], $_POST['note']));
+    $storage->Save(new Product($_POST['name'], $_POST['price'], $_GET['id'], $_POST['note'],$_SESSION['user_email']));
 }
 
 ?>
@@ -176,3 +181,5 @@ if (isset($_POST['name'])) {
 
 </body>
 </html>
+
+<?php } ?>

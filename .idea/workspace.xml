@@ -21,9 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6f41271b-6538-4e9e-9abe-789612676519" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLASS/DBStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/CLASS/DBStorage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLASS/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/CLASS/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FILE/kosik.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/kosik.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FILE/ponuka.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/ponuka.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FILE/prihlasenie.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/prihlasenie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FILE/registracia.php" beforeDir="false" afterPath="$PROJECT_DIR$/FILE/registracia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax_info" beforeDir="false" afterPath="$PROJECT_DIR$/ajax_info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +117,7 @@
       <workItem from="1606160648218" duration="464000" />
       <workItem from="1606201139039" duration="1760000" />
       <workItem from="1610532150491" duration="32914000" />
-      <workItem from="1610625048411" duration="14088000" />
+      <workItem from="1610625048411" duration="19861000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <created>1603095323798</created>
@@ -243,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610635930835</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update">
+      <created>1610639362927</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610639362927</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,10 +300,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="529" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610545850787" />
-    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1610537833961">
+    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1610641729671">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610537833961" />
+    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610641729671" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605869351568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -365,24 +374,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605365654030" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610635932614">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610639364409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610635932614" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610639364409" />
     <state x="2371" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605873237083" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605814765352" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605346404836">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605346404836" />
-    <state x="611" y="299" width="314" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1605346220126">
+    <state x="611" y="299" width="314" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1610642301276">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="611" y="299" width="314" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605346220126" />
-    <state x="485" y="220" width="466" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610639356080">
+    <state x="611" y="299" width="314" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610642301276" />
+    <state x="566" y="232" width="403" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1610641055463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="485" y="220" width="466" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610639356080" />
+    <state x="566" y="232" width="403" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610641055463" />
+    <state x="685" y="126" width="466" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610643827278">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="685" y="126" width="466" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610643827278" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603106677568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -11,15 +11,15 @@ class DBStorage
         $this->pdo = new PDO("mysql:host=localhost;dbname=shoppingcart", "root", "dtb456");
     }
 
-    public function LoadAll()
+    public function LoadAll($param)
     {
         $result = [];
 
 
-        $r = $this->pdo->query("SELECT * FROM products");
+        $r = $this->pdo->query("SELECT * FROM products WHERE userID = '$param'");
 
         foreach ($r as $item) {
-            $result[] = new Product($item['name'], $item['price'], $item['id'], $item['note']);
+            $result[] = new Product($item['name'], $item['price'], $item['id'], $item['note'],$item['userID']);
 
         }
 
@@ -30,8 +30,8 @@ class DBStorage
 
     public function Save(Product $param)
     {
-        $statement = $this->pdo->prepare("INSERT INTO products (name , price) value (?,?)");
-        $statement->execute([$param->getNazov(), $param->getCena()]);
+        $statement = $this->pdo->prepare("INSERT INTO products (name , price, userID) value (?,?,?)");
+        $statement->execute([$param->getNazov(), $param->getCena(),$param->getUserID()]);
 
         header("Location: http://localhost:63342/SEM/FILE/kosik.php");
     }
@@ -109,6 +109,8 @@ class DBStorage
 
 
     }
+
+
 
 
 

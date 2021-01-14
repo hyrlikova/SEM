@@ -39,7 +39,7 @@ if (isset($_SESSION['user_email'])) {
         <div class="zoznam">
 
 
-            <?php foreach ($storage->LoadAll() as $product) { ?>
+            <?php foreach ($storage->LoadAll($_SESSION['user_email']) as $product) { ?>
                 <div class="kontainerKosik">
 
 

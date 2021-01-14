@@ -27,7 +27,7 @@ if (isset($_POST['email'], $_POST['heslo'])) {
 
     if ($storage->PrihlasenieCheck($_POST['email'],$_POST['heslo']) == false) {
 
-        $_SESSION['user_email'] =$_POST['email'];
+        $_SESSION['user_email'] = $_POST['email'];
 
         echo '<script type="text/javascript">';
         echo 'window.location.href = "menu.php";';
