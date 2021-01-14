@@ -73,3 +73,6 @@ if (isset($_POST['email'], $_POST['heslo'], $_POST['adresa'], $_POST['mobil'])) 
 
     </div>
 </div>
+
+
+

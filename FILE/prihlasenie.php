@@ -77,5 +77,10 @@ if (isset($_POST['email'], $_POST['heslo'])) {
 </div>
 
 
+
+
+
+
+
 </body>
 </html>
