@@ -18,7 +18,7 @@ require "../CLASS/DBStorage.php";
 $storage = new DBStorage();
 
 
-if (isset($_POST['email'], $_POST['heslo'], $_POST['adresa'], $_POST['mobil'])) {
+if (isset($_POST['email'], $_POST['heslo'], $_POST['mesto'],$_POST['ulica'], $_POST['mobil'])) {
 
 
     if ($storage->EmailCheck($_POST['email']) == true) {
@@ -32,7 +32,7 @@ if (isset($_POST['email'], $_POST['heslo'], $_POST['adresa'], $_POST['mobil'])) 
 
 
 
-        $storage->SaveUser(new User($_POST['email'], myHash($_POST['email'],$_POST['heslo']), $_POST['adresa'], $_POST['mobil']));
+        $storage->SaveUser(new User($_POST['email'], myHash($_POST['email'],$_POST['heslo']), $_POST['mesto'],$_POST['ulica'], $_POST['mobil']));
 
         echo '<script type="text/javascript">';
         echo 'window.location.href = "prihlasenie.php";';
@@ -56,12 +56,15 @@ if (isset($_POST['email'], $_POST['heslo'], $_POST['adresa'], $_POST['mobil'])) 
             <input id="heslo" type="password" placeholder="Zadajte heslo" name="heslo" value="" required><br><br>
 
 
-            <label for="adresa"><b>Adresa</b> </label><br>
-            <input id="adresa" type="text" placeholder="Zadajte adresu" name="adresa" value="" required><br><br>
+            <label for="mesto"><b>Mesto</b> </label><br>
+            <input id="mesto" type="text" placeholder="Zadajte mesto" name="mesto" value="" maxlength="20" pattern="[^0-9]*" title="Nemôže obsahovať čísla" required><br><br>
+
+            <label for="ulica"><b>Ulica</b> </label><br>
+            <input id="ulica" type="text" placeholder="Zadajte ulicu a číslo domu" name="ulica" maxlength="50" value="" required><br><br>
 
 
             <label for="mobil"><b>Telefónne číslo</b></label><br>
-            <input id="mobil" type="tel" placeholder="09YYXXXXXX" name="mobil" value="" pattern="09[0-9]{8}"
+            <input id="mobil" type="tel" placeholder="09XXXXXXXX" name="mobil" value="" pattern="09[0-9]{8}" title="Nemôže obsahovať písmená "
                    required><br><br>
 
 

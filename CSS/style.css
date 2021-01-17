@@ -368,6 +368,7 @@ th {
     text-align: center;
 }
 
+
 /*media queries*/
 @media only screen and (max-width: 950px) {
     .kontainer {
@@ -463,7 +464,7 @@ text-align: center;
 /*******************************************registracia**********************************************/
 
 .kontajnerRegister {
-    margin-top: 10%;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
 }

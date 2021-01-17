@@ -62,11 +62,11 @@ if (isset($_SESSION['user_email'])) {
 
 <div class="pata">
     <h1 class = "napisteNam">NAPÍŠTE NÁM</h1>
-    <p>Ak máte akékoľvek otázky, chceli by ste pochváliť naše jedlo, alebo máte nápad, ako naše služby zlepšiť, napíšte nám.</p>
+    <p>Ak máte akékoľvek otázky, chceli by ste pochváliť naše jedlo, alebo máte nápad, ako naše služby zlepšiť, napíšte nám. </p>
 </div>
 
 
-</body>
+    </body>
 </html>
 <?php } else
 header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php");?>

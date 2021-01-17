@@ -8,17 +8,11 @@ require "../CLASS/DBStorage.php";
 
 $storage = new DBStorage();
 
-
-
 $response_array['status'] = 'success';
-
 
 
 try {
     $storage->Remove($_POST['id']);
-
-
-
 }catch (Exception $exception){
     $response_array['status'] = 'error';
 }

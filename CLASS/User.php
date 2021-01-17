@@ -5,25 +5,60 @@ class User
 {
     private $email;
     private $heslo;
-    private $adresa;
+    private $mesto;
     private $mobil;
-    //private $id;
+    private $ulica;
+
 
     /**
      * User constructor.
      * @param $email
      * @param $heslo
-    // * @param $id
-     * @param $adresa
+     * @param $mesto
+     * @param $ulica
      * @param $mobil
      */
-    public function __construct($email, $heslo,$adresa, $mobil)
+    public function __construct($email, $heslo, $mesto, $ulica, $mobil)
     {
         $this->email = $email;
         $this->heslo = $heslo;
-        $this->adresa = $adresa;
+        $this->mesto = $mesto;
         $this->mobil = $mobil;
-        //$this->id = $id;
+        $this->ulica = $ulica;
+
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getMesto()
+    {
+        return $this->mesto;
+    }
+
+    /**
+     * @param mixed $mesto
+     */
+    public function setMesto($mesto)
+    {
+        $this->mesto = $mesto;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUlica()
+    {
+        return $this->ulica;
+    }
+
+    /**
+     * @param mixed $ulica
+     */
+    public function setUlica($ulica)
+    {
+        $this->ulica = $ulica;
     }
 
     /**
@@ -58,22 +93,6 @@ class User
         $this->heslo = $heslo;
     }
 
-
-    /**
-     * @return mixed
-     */
-    public function getAdresa()
-    {
-        return $this->adresa;
-    }
-
-    /**
-     * @param mixed $adresa
-     */
-    public function setAdresa($adresa)
-    {
-        $this->adresa = $adresa;
-    }
 
     /**
      * @return mixed

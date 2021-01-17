@@ -40,10 +40,9 @@ class DBStorage
 
     public function SaveUser(User $param)
     {
-        $statement = $this->pdo->prepare("INSERT INTO users (email,heslo,adresa,mobil) value (?,?,?,?)");
-        $statement->execute([$param->getEmail(), $param->getHeslo(), $param->getAdresa(), $param->getMobil()]);
+        $statement = $this->pdo->prepare("INSERT INTO users (email,heslo,mesto,ulica,mobil) value (?,?,?,?,?)");
+        $statement->execute([$param->getEmail(), $param->getHeslo(), $param->getMesto(), $param->getUlica(), $param->getMobil()]);
 
-        //header("Location: http://localhost:63342/SEM/prihlasenie.php");
     }
 
 
