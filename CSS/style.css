@@ -5,7 +5,7 @@ body {
 }
 
 
-/*******************************************menu**********************************************/
+/*******************************************Navigacne menu**********************************************/
 .linav {
     display: inline-block;
     margin: 0;
@@ -88,6 +88,8 @@ li a {
     }
 
 }
+
+/*******************************************menu**********************************************/
 
 /*baner*/
 .jedlo {
@@ -185,7 +187,15 @@ li a {
     font-size: 25px;
     font-weight: bold;
 }
+ .tlacidlo
+{
+    font-family: cursive, serif;
+    background-color: unset;
+    color: black;
+    border: none;
+    cursor: pointer;
 
+ }
 
 /*pomenovanie*/
 
@@ -388,7 +398,7 @@ th {
 .kontainerKosikBtnObjednat{
     padding: 20px;
 }
-.tlacidlo {
+.tlacidloPero, .tlacidloTrash{
     font-family: cursive, serif;
     background-color: unset;
     color: black;

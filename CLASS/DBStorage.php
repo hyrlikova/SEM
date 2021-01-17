@@ -35,7 +35,7 @@ class DBStorage
         $statement = $this->pdo->prepare("INSERT INTO products (name , price, userID) value (?,?,?)");
         $statement->execute([$param->getNazov(), $param->getCena(), $param->getUserID()]);
 
-        header("Location: http://localhost:63342/SEM/FILE/kosik.php");
+    header("Location: http://localhost:63342/SEM/FILE/kosik.php");
     }
 
     public function SaveUser(User $param)
@@ -54,7 +54,9 @@ class DBStorage
             ':param' => $param
         ));
         $row = $suma->fetch(PDO::FETCH_ASSOC);
-        echo number_format($row['cena'], 2, '.', ''), "&#8364;";
+//        echo number_format($row['cena'], 2, '.', ''), "&#8364;";
+
+        return number_format($row['cena'], 2, '.', ''). "&#8364;";
     }
 
     public function redirect()

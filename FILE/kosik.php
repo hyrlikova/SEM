@@ -1,20 +1,20 @@
 <?php include_once "header.php" ?>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 <?php
 require "../CLASS/Product.php";
 require "../CLASS/DBStorage.php";
+
 
 session_start();
 
 
 if (isset($_SESSION['user_email'])) {
 
-//$storage = new FileStorage();
     $storage = new DBStorage();
 
-    if (isset($_POST['id'])) {
-        $storage->Remove($_POST['id']);
-    }
+//    if (isset($_POST['id'])) {
+//        $storage->Remove($_POST['id']);
+//    }
 
     if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $_GET['note']))) {
         $storage->Update($_GET['note'], ($_GET['id']));
@@ -35,11 +35,12 @@ if (isset($_SESSION['user_email'])) {
 
     <div class="obalovacZoznamu">
 
-        <div class="zoznam">
+        <div class="zoznam" id="zoznam">
 
 
             <?php foreach ($storage->LoadAll($_SESSION['user_email']) as $product) { ?>
-                <div class="kontainerKosik">
+
+                <div class="kontainerKosik" id="<?php echo $product->getId() ?>">
 
 
                     <div class="obsah">
@@ -55,7 +56,9 @@ if (isset($_SESSION['user_email'])) {
                                        value="<?php echo $product->getNote() ?>" maxlength="100">
                                 <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
 
-                                <button type="submit" value="Submit" onclick="funUpdateSucc()" class="tlacidlo">
+
+                                <button type="submit" value="Submit" class="tlacidloPero">
+
                                     <img class="trash"
                                          src="https://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon-14.png"
                                          alt="pero">
@@ -68,18 +71,20 @@ if (isset($_SESSION['user_email'])) {
 
                         <form method="post" class="remove">
 
-                            <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
+                            <input type="hidden" name="id" value="<?php echo $product->getId()?>">
+
                             <div class="oramovanieKosik ks">
                                 <?php echo $product->getCena(), "0&#8364;" ?>
 
-                                <button type="submit" value="Submit" class="tlacidlo">
+                                <button type="button" value="Submit" class="tlacidloTrash bin"
+                                        id="bin"  onclick="showDetails(bin);" data-id-type="<?php echo $product->getId() ?>" >
                                     <img class="trash"
                                          src="https://www.freeiconspng.com/uploads/remove-icon-png-31.png"
                                          alt="trash">
                                 </button>
 
-
                             </div>
+
                         </form>
 
                     </div>
@@ -96,9 +101,9 @@ if (isset($_SESSION['user_email'])) {
                 <div class="spoluSuma">
                 </div>
 
-                <div class="spoluSuma">
+                <div class="spoluSuma" id="suma"">
                     <?php
-                    $storage->Price($_SESSION['user_email']);
+                   echo  $storage->Price($_SESSION['user_email']);
                     ?>
 
 
@@ -134,13 +139,44 @@ if (isset($_SESSION['user_email'])) {
 
 
     <script>
-        function funUpdateSucc() {
-            <?php foreach ($storage->LoadAll() as $product){ ?>
-            document.getElementById("<?php echo $product->getId() ?>").style.backgroundColor = "#92f895";
-            <?php } ?>
-        }
+
+
+          function showDetails (id) {
+
+              var idType = id.getAttribute("data-id-type");
+
+
+
+              $.ajax({
+                  type: "POST",
+                  url: "../FILE/remove.php",
+                  data: {id: idType },
+
+                  success: function (data) {
+
+
+                      if (data.status == 'success') {
+
+                          $("#" + idType + "").empty();
+                          $("#suma").empty().append(data.price);
+                          alert("Polozka bola odstranena!");
+                          alert(data.price);
+                      } else if (data.status == 'error') {
+                          alert("Error on query!");
+                      }
+                  },
+                  error: function (data) {
+                    alert("chyba")
+                  }
+              });
+          }
+
+
 
     </script>
 
+
+
 <?php } else
     header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php"); ?>
+
