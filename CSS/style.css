@@ -379,6 +379,7 @@ th {
     font-weight: bold;
     border: unset;
     cursor: pointer;
+    padding: 5px;
 }
 
 /*media queries*/

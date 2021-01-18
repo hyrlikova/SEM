@@ -1,4 +1,10 @@
-<?php include_once "header.php";
+
+
+<?php include_once "header.php"; ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<?php
 session_start();
 
 if (isset($_SESSION['user_email'])) {
@@ -10,15 +16,17 @@ if (isset($_SESSION['user_email'])) {
     $storage = new DBStorage();
 
 
-    if (isset($_POST['dodanie'],$_POST['jedlo'],$_POST['spokojnost'])) {
-        $storage->EvaluationSave(new Evaluation($_GET['id'], $_POST['dodanie'], $_POST['jedlo'],  $_POST['spokojnost'], $_SESSION['user_email']));
-
-        echo '<script type="text/javascript">';
-        echo 'window.location.href = "kontakt.php";';
-        echo 'alert("Ďakujeme za Vaše hodnotenie!");';
-        echo '</script>';
-
-    }
+//    if (isset($_POST['dodanie'], $_POST['jedlo'], $_POST['spokojnost'])) {
+//        $storage->EvaluationSave(new Evaluation($_POST['id'], $_POST['dodanie'], $_POST['jedlo'], $_POST['spokojnost'], $_SESSION['user_email']));
+//
+//        echo '<script type="text/javascript">';
+//        echo 'window.location.href = "kontakt.php";';
+//        echo 'alert("Ďakujeme za Vaše hodnotenie!");';
+//        echo '</script>';
+//
+//    } else {
+//
+//    }
 
 
     ?>
@@ -87,66 +95,104 @@ if (isset($_SESSION['user_email'])) {
 
         <div class="spokojnostZakaznikov">
             <h1 class="napisteNam">OHODONOŤTE NÁS</h1>
-            <form method="post">
+
+            <div id="hodnotenie">
 
 
-                <label for="email"><b>Email: <?php echo $_SESSION['user_email'] ?></b></label><br><br>
+                <label><b>Email: <?php echo $_SESSION['user_email'] ?></b></label><br><br>
 
                 <label><b>Spokojnosť s dodaním jedla </b></label><br>
 
-                <input type="radio" id="dodanie" name="dodanie" value="rychlo">
-                <label for="dodanie">Doručenie bolo rýchle</label>
+                <input type="radio" id="dodanie1" name="dodanie" value="rychlo" required>
+                <label for="dodanie1">Doručenie bolo rýchle</label>
 
-                <input type="radio" id="dodanie" name="dodanie" value="Ok">
-                <label for="dodanie">Doručenie bolo priemerné</label>
+                <input type="radio" id="dodanie2" name="dodanie" value="Ok">
+                <label for="dodanie2">Doručenie bolo priemerné</label>
 
-                <input type="radio" id="dodanie" name="dodanie" value="pomaly">
-                <label for="dodanie">Doručenie bolo pomalé</label> <br><br>
+                <input type="radio" id="dodanie3" name="dodanie" value="pomaly">
+                <label for="dodanie3">Doručenie bolo pomalé</label> <br><br>
 
 
                 <label><b>Spokojnosť s jedlom</b></label><br>
 
-                <input type="radio" id="jedlo" name="jedlo" value="Výborné">
-                <label for="jedlo">Jedlo mi chutilo </label>
-                <input type="radio" id="jedlo" name="jedlo" value="Ok">
-                <label for="jedlo">Jedlo bolo priemerné</label>
-                <input type="radio" id="jedlo" name="jedlo" value="Zle">
-                <label for="jedlo">Jedlo mi nechutilo </label> <br> <br>
+                <input type="radio" id="jedlo1" name="jedlo" value="Výborné" required>
+                <label for="jedlo1">Jedlo mi chutilo </label>
+                <input type="radio" id="jedlo2" name="jedlo" value="Ok">
+                <label for="jedlo2">Jedlo bolo priemerné</label>
+                <input type="radio" id="jedlo3" name="jedlo" value="Zle">
+                <label for="jedlo3">Jedlo mi nechutilo </label> <br> <br>
 
 
                 <label><b>Odporučili by ste nás ? (1-určite nie , 10-určite áno )</b></label><br>
 
-                <input type="radio" name="spokojnost" id="spokojnost" value="1">
-                <label for="spokojnost">1 </label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="2">
-                <label for="spokojnost">2 </label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="3">
-                <label for="spokojnost">3 </label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="4">
-                <label for="spokojnost">4 </label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="5">
-                <label for="spokojnost">5 </label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="6">
-                <label for="spokojnost">6 </label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="7">
-                <label for="spokojnost">7 </label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="8">
-                <label for="spokojnost">8 </label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="9">
-                <label for="spokojnost">9</label>
-                <input type="radio" name="spokojnost" id="spokojnost"  value="10">
-                <label for="spokojnost">10 </label><br><br>
+                <input type="radio" name="spokojnost" id="spokojnost1" value="1" required>
+                <label for="spokojnost1">1 </label>
+                <input type="radio" name="spokojnost" id="spokojnost2" value="2">
+                <label for="spokojnost2">2 </label>
+                <input type="radio" name="spokojnost" id="spokojnost3" value="3">
+                <label for="spokojnost3">3 </label>
+                <input type="radio" name="spokojnost" id="spokojnost4" value="4">
+                <label for="spokojnost4">4 </label>
+                <input type="radio" name="spokojnost" id="spokojnost5" value="5">
+                <label for="spokojnost5">5 </label>
+                <input type="radio" name="spokojnost" id="spokojnost6" value="6">
+                <label for="spokojnost6">6 </label>
+                <input type="radio" name="spokojnost" id="spokojnost7" value="7">
+                <label for="spokojnost7">7 </label>
+                <input type="radio" name="spokojnost" id="spokojnost8" value="8">
+                <label for="spokojnost8">8 </label>
+                <input type="radio" name="spokojnost" id="spokojnost9" value="9">
+                <label for="spokojnost9">9</label>
+                <input type="radio" name="spokojnost" id="spokojnost10" value="10">
+                <label for="spokojnost10">10 </label><br><br>
 
 
-                <button class="evaluationButton" type="submit" value="Submit">Odoslať</button>
+
+                <input id="submit" type="button" value="Submit">
+
+<!--                <button class="evaluationButton" type="submit" onclick="formFun()" value="Submit">Odoslať</button>-->
                 <br>
 
-            </form>
+            </div>
 
         </div>
     </div>
 
+
+    <script>
+
+        $(document).ready(function () {
+            $("#submit").click(function () {
+
+                var dodanie = $('input[name="dodanie"]:checked').val();
+                var jedlo = $('input[name="jedlo"]:checked').val();
+                var spokojnost = $('input[name="spokojnost"]:checked').val();
+
+                var dataString = 'dodanie=' + dodanie + '&jedlo=' + jedlo + '&spokojnost=' + spokojnost;
+
+                $.ajax({
+                    type: "POST",
+                    url: "../FILE/evaluationAjax.php",
+                    data: dataString,
+                    cache: true,
+
+                    success: function (result) {
+                        alert("nieco")
+                    },
+
+                    error: function (data) {
+                        $("#hodnotenie").empty().append("Ďakujeme za Vaše ohodnotenie!");
+                    }
+                });
+                return false;
+            });
+
+        });
+    </script>
+
+
     </body>
     </html>
+
 <?php } else
     header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php"); ?>

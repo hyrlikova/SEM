@@ -28,7 +28,7 @@ if (isset($_SESSION['user_email'])) {
 
             <?php foreach ($storage->LoadAll($_SESSION['user_email']) as $product) { ?>
 
-                <div class="kontainerKosik" id="<?php echo $product->getId() ?>">
+                <div class="kontainerKosik" id="n<?php echo $product->getId() ?>">
 
 
                     <div class="obsah">
@@ -39,7 +39,8 @@ if (isset($_SESSION['user_email'])) {
                             <div class="oramovanieKosik">
 
                                 <input class="note" id="<?php echo $product->getId() ?>" type="text" name="note"
-                                       value="<?php echo $product->getNote() ?>" maxlength="100" placeholder="Vložte poznámku...">
+                                       value="<?php echo $product->getNote() ?>" maxlength="100"
+                                       placeholder="Vložte poznámku...">
                                 <input type="hidden" name="id" value="<?php echo $product->getId() ?>">
 
 
@@ -61,7 +62,7 @@ if (isset($_SESSION['user_email'])) {
                                 <?php echo $product->getCena(), "0&#8364;" ?>
 
                                 <button type="button" value="Submit" class="tlacidloTrash bin"
-                                        id="bin" onclick="showDetails(bin);"
+                                        id="bin<?php echo $product->getId() ?>" onclick="showDetails(bin<?php echo $product->getId() ?>);"
                                         data-id-type="<?php echo $product->getId() ?>">
                                     <img class="trash"
                                          src="https://www.freeiconspng.com/uploads/remove-icon-png-31.png"
@@ -84,9 +85,10 @@ if (isset($_SESSION['user_email'])) {
                 </div>
 
                 <div class="spoluSuma" id="suma">
-                <?php
-                echo $storage->Price($_SESSION['user_email']);
-                ?>
+                    <?php
+                    echo $storage->Price($_SESSION['user_email']);
+                    ?>
+                </div>
             </div>
         </div>
     </div>
@@ -102,7 +104,7 @@ if (isset($_SESSION['user_email'])) {
 
                 success: function (data) {
                     if (data.status == 'success') {
-                        $("#" + idType + "").empty();
+                        $("#n" + idType + "").empty();
                         $("#suma").empty().append(data.price);
                         // alert("Položka bola odstránená!");
                     } else if (data.status == 'error') {
@@ -116,7 +118,8 @@ if (isset($_SESSION['user_email'])) {
         }
     </script>
 
-
+    </body>
+    </html>
 
 <?php } else
     header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php"); ?>
