@@ -1,5 +1,6 @@
 <?php include_once "header.php" ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 <?php
 require "../CLASS/Product.php";
 require "../CLASS/DBStorage.php";
@@ -62,7 +63,7 @@ if (isset($_SESSION['user_email'])) {
                                 <?php echo $product->getCena(), "0&#8364;" ?>
 
                                 <button type="button" value="Submit" class="tlacidloTrash bin"
-                                        id="bin<?php echo $product->getId() ?>" onclick="showDetails(bin<?php echo $product->getId() ?>);"
+                                        id="bin<?php echo $product->getId() ?>" onclick="removeFromCart(bin<?php echo $product->getId() ?>);"
                                         data-id-type="<?php echo $product->getId() ?>">
                                     <img class="trash"
                                          src="https://www.freeiconspng.com/uploads/remove-icon-png-31.png"
@@ -95,27 +96,7 @@ if (isset($_SESSION['user_email'])) {
 
 
     <script>
-        function showDetails(id) {
-            var idType = id.getAttribute("data-id-type");
-            $.ajax({
-                type: "POST",
-                url: "../FILE/remove.php",
-                data: {id: idType},
 
-                success: function (data) {
-                    if (data.status == 'success') {
-                        $("#n" + idType + "").empty();
-                        $("#suma").empty().append(data.price);
-                        // alert("Položka bola odstránená!");
-                    } else if (data.status == 'error') {
-                        alert("Error on query!");
-                    }
-                },
-                error: function (data) {
-                    alert("chyba")
-                }
-            });
-        }
     </script>
 
     </body>

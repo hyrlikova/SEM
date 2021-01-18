@@ -13,6 +13,9 @@ class DBStorage
         $this->pdo = new PDO("mysql:host=localhost;dbname=shoppingcart", "root", "dtb456");
     }
 
+
+
+
     public function LoadAll($param)
     {
         $result = [];
@@ -35,7 +38,7 @@ class DBStorage
         $statement = $this->pdo->prepare("INSERT INTO products (name , price, userID) value (?,?,?)");
         $statement->execute([$param->getNazov(), $param->getCena(), $param->getUserID()]);
 
-    header("Location: http://localhost:63342/SEM/FILE/kosik.php");
+          //header("Location: http://localhost:63342/SEM/FILE/kosik.php");
     }
 
     public function SaveUser(User $param)

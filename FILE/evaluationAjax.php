@@ -9,23 +9,23 @@ require "../CLASS/DBStorage.php";
 
 $storage = new DBStorage();
 
-$response_array['status'] = 'success';
-
-
 $id = $_POST['id'];
-$dodanie =  $_POST['dodanie'];
+$dodanie = $_POST['dodanie'];
 $jedlo = $_POST['jedlo'];
 $spokojnost = $_POST['spokojnost'];
-$user_emal= $_SESSION['user_email'];
+$user_emal = $_SESSION['user_email'];
 
 
-$storage->EvaluationSave(new Evaluation($id,$dodanie,$jedlo,$spokojnost,$user_emal));
+if ($dodanie == "undefined" || $jedlo== "undefined" || $spokojnost == "undefined") {
+
+    echo 400;
 
 
-http_response_code(200);
-echo http_response_code();
+} else {
 
-echo json_encode($response_array);
+    $storage->EvaluationSave(new Evaluation($id, $dodanie, $jedlo, $spokojnost, $user_emal));
+    echo 200;
+}
 
 
 

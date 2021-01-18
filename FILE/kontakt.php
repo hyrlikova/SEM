@@ -1,8 +1,7 @@
 
 
-<?php include_once "header.php"; ?>
+<?php include_once "header.php";?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <?php
 session_start();
@@ -14,20 +13,6 @@ if (isset($_SESSION['user_email'])) {
 
 
     $storage = new DBStorage();
-
-
-//    if (isset($_POST['dodanie'], $_POST['jedlo'], $_POST['spokojnost'])) {
-//        $storage->EvaluationSave(new Evaluation($_POST['id'], $_POST['dodanie'], $_POST['jedlo'], $_POST['spokojnost'], $_SESSION['user_email']));
-//
-//        echo '<script type="text/javascript">';
-//        echo 'window.location.href = "kontakt.php";';
-//        echo 'alert("Ďakujeme za Vaše hodnotenie!");';
-//        echo '</script>';
-//
-//    } else {
-//
-//    }
-
 
     ?>
 
@@ -104,10 +89,10 @@ if (isset($_SESSION['user_email'])) {
                 <label><b>Spokojnosť s dodaním jedla </b></label><br>
 
                 <input type="radio" id="dodanie1" name="dodanie" value="rychlo" required>
-                <label for="dodanie1">Doručenie bolo rýchle</label>
+                <label for="dodanie1">Doručenie bolo rýchle</label><br>
 
                 <input type="radio" id="dodanie2" name="dodanie" value="Ok">
-                <label for="dodanie2">Doručenie bolo priemerné</label>
+                <label for="dodanie2">Doručenie bolo priemerné</label><br>
 
                 <input type="radio" id="dodanie3" name="dodanie" value="pomaly">
                 <label for="dodanie3">Doručenie bolo pomalé</label> <br><br>
@@ -116,9 +101,9 @@ if (isset($_SESSION['user_email'])) {
                 <label><b>Spokojnosť s jedlom</b></label><br>
 
                 <input type="radio" id="jedlo1" name="jedlo" value="Výborné" required>
-                <label for="jedlo1">Jedlo mi chutilo </label>
+                <label for="jedlo1">Jedlo mi chutilo </label><br>
                 <input type="radio" id="jedlo2" name="jedlo" value="Ok">
-                <label for="jedlo2">Jedlo bolo priemerné</label>
+                <label for="jedlo2">Jedlo bolo priemerné</label><br>
                 <input type="radio" id="jedlo3" name="jedlo" value="Zle">
                 <label for="jedlo3">Jedlo mi nechutilo </label> <br> <br>
 
@@ -148,7 +133,7 @@ if (isset($_SESSION['user_email'])) {
 
 
 
-                <input id="submit" type="button" value="Submit">
+                <input id="submit" type="button" value="Ohodnotiť" class="evaluationButton">
 
 <!--                <button class="evaluationButton" type="submit" onclick="formFun()" value="Submit">Odoslať</button>-->
                 <br>
@@ -157,38 +142,6 @@ if (isset($_SESSION['user_email'])) {
 
         </div>
     </div>
-
-
-    <script>
-
-        $(document).ready(function () {
-            $("#submit").click(function () {
-
-                var dodanie = $('input[name="dodanie"]:checked').val();
-                var jedlo = $('input[name="jedlo"]:checked').val();
-                var spokojnost = $('input[name="spokojnost"]:checked').val();
-
-                var dataString = 'dodanie=' + dodanie + '&jedlo=' + jedlo + '&spokojnost=' + spokojnost;
-
-                $.ajax({
-                    type: "POST",
-                    url: "../FILE/evaluationAjax.php",
-                    data: dataString,
-                    cache: true,
-
-                    success: function (result) {
-                        alert("nieco")
-                    },
-
-                    error: function (data) {
-                        $("#hodnotenie").empty().append("Ďakujeme za Vaše ohodnotenie!");
-                    }
-                });
-                return false;
-            });
-
-        });
-    </script>
 
 
     </body>

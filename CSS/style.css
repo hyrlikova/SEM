@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: cursive, serif;
+    font-family: helvetica, serif;
     background-image: url("https://wallpaperaccess.com/full/666602.jpg");
 }
 
@@ -22,6 +22,7 @@ body {
     display: flex;
     justify-content: left;
     height: 60px;
+    z-index: 2;
 }
 
 .mobile-container {
@@ -30,11 +31,12 @@ body {
 
 /*podfarbenie*/
 li:hover {
-    background: forestgreen;
+    background: #626161;
+    opacity: 70%;
 }
 
 /*polozky v menu*/
-li a {
+li a, .cas {
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -104,7 +106,7 @@ li a {
     margin-top: 10%;
     transform: translate(-50%, 50%);
     color: white;
-    font-family: "Comic Sans MS", serif;
+    font-family: helvetica, serif;
     font-size: 55px;
 }
 
@@ -189,7 +191,7 @@ li a {
 }
  .tlacidlo
 {
-    font-family: cursive, serif;
+    font-family:helvetica, serif;
     background-color: unset;
     color: black;
     border: none;
@@ -264,7 +266,7 @@ li a {
 
 /*prihlasit button*/
 .prihlasitButton, .registerButton {
-    font-family: cursive, serif;
+    font-family: helvetica, serif;
     background-color: #4caf50;
     color: white;
     padding: 9px 20px;
@@ -359,13 +361,14 @@ th {
 
 /* spodny blok*/
 .pata {
-    background-color: #fbb273;
+    background-color: #ecdfb9;
     padding-top: 10px;
     width: 80%;
     margin-left: 50%;
     transform: translate(-50%, 20%);
     text-align: center;
     padding-bottom: 20px;
+    z-index: 2;
 }
 
 .spokojnostZakaznikov{
@@ -400,6 +403,10 @@ th {
         display: flex;
         justify-content: center;
     }
+
+    .napisteNam{
+        font-size: 16px;
+    }
 }
 
 /*******************************************kosik**********************************************/
@@ -413,7 +420,7 @@ th {
     padding: 20px;
 }
 .tlacidloPero, .tlacidloTrash{
-    font-family: cursive, serif;
+    font-family: helvetica, serif;
     background-color: unset;
     color: black;
     border: none;
@@ -491,7 +498,7 @@ text-align: center;
 }
 
 .signupbtn,.cancelbtn {
-    font-family: cursive, serif;
+    font-family: helvetica, serif;
     background-color: #4caf50;
     color: white;
     padding: 9px 20px;
@@ -505,5 +512,21 @@ text-align: center;
     background-color: #cf2544;
 }
 
+@media only screen and (max-width: 500px) {
 
+    .oramovanieKosik{
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    .obsah{
+        display: block;
+    }
+
+    .zoznam{
+        width: 100%;
+    }
+
+}
 

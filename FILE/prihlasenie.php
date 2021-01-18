@@ -34,10 +34,7 @@ if (isset($_POST['email'], $_POST['heslo'])) {
 
 
     } else {
-        echo '<script type="text/javascript">';
-        echo 'window.location.href = "prihlasenie.php";';
-        echo 'alert("Nespravne meno alebo heslo!");';
-        echo '</script>';
+        echo '<script type="text/javascript"> window.location.href = "prihlasenie.php";alert("Nespravne meno alebo heslo!");</script>';
     }
 }
 

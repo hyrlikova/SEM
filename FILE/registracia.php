@@ -23,21 +23,13 @@ if (isset($_POST['email'], $_POST['heslo'], $_POST['mesto'],$_POST['ulica'], $_P
 
     if ($storage->EmailCheck($_POST['email']) == true) {
 
-        echo '<script type="text/javascript">';
-        echo 'window.location.href = "prihlasenie.php";';
-        echo 'alert("Email už existuje!");';
-        echo '</script>';
+        echo '<script type="text/javascript"> window.location.href = "prihlasenie.php";alert("Email už existuje!");</script>';
 
     } else {
 
-
-
         $storage->SaveUser(new User($_POST['email'], myHash($_POST['email'],$_POST['heslo']), $_POST['mesto'],$_POST['ulica'], $_POST['mobil']));
 
-        echo '<script type="text/javascript">';
-        echo 'window.location.href = "prihlasenie.php";';
-        echo 'alert("Registrácia prebehla úspešne!");';
-        echo '</script>';
+        echo '<script type="text/javascript">window.location.href = "prihlasenie.php";alert("Registrácia prebehla úspešne!");</script>';
     }
 }
 

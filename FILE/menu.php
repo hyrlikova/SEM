@@ -33,6 +33,7 @@ if (isset($_SESSION['user_email'])) {
     <img class="burger" src="../IMG/hamburger.png" alt="burger">
 </div>
 
+
 </body>
 </html>
 

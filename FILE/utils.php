@@ -7,3 +7,6 @@ function myHash ($email,$heslo){
 
     return $myHash;
 }
+
+
+
