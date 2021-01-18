@@ -58,11 +58,6 @@ class DBStorage
         return number_format($row['cena'], 2, '.', ''). "&#8364;";
     }
 
-    public function redirect()
-    {
-        header("Location: http://localhost:63342/SEM/FILE/prihlasenie.php");
-    }
-
 
     public function Remove($param)
     {
@@ -116,6 +111,12 @@ class DBStorage
         return false;
 
 
+    }
+
+    public function EvaluationSave(Evaluation $param){
+
+        $statement = $this->pdo->prepare("INSERT INTO evaluation (dodanie, jedlo, spokojnost, user_email) value (?,?,?,?)");
+        $statement->execute([$param->getDodanie(), $param->getJedlo(), $param->getSpokojnost(), $param->getUserEmail()]);
     }
 
 

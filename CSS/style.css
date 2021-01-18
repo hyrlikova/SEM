@@ -354,20 +354,32 @@ li a {
 
 th {
     padding: 15px;
+
 }
 
 /* spodny blok*/
 .pata {
     background-color: #fbb273;
-    padding-top: 20px;
+    padding-top: 10px;
     width: 80%;
-    height: 180px;
     margin-left: 50%;
-    margin-bottom: 20px;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 20%);
     text-align: center;
+    padding-bottom: 20px;
 }
 
+.spokojnostZakaznikov{
+    text-align: left;
+    margin-left: 10%;
+
+}
+
+.evaluationButton{
+    background-color: #4caf50;
+    font-weight: bold;
+    border: unset;
+    cursor: pointer;
+}
 
 /*media queries*/
 @media only screen and (max-width: 950px) {
