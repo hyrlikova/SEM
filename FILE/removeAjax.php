@@ -12,12 +12,12 @@ $response_array['status'] = 'success';
 
 
 try {
-    $storage->Remove($_POST['id']);
+    $storage->RemoveProdactFromCart($_POST['id']);
 }catch (Exception $exception){
     $response_array['status'] = 'error';
 }
 
 
-$response_array['price'] = $storage->Price($_SESSION['user_email']);
+$response_array['price'] = $storage->CountCartPrice($_SESSION['user_email']);
 
 echo json_encode($response_array);

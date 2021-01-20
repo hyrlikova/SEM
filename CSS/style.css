@@ -481,6 +481,24 @@ text-align: center;
     border: solid black 2px;
 }
 
+@media only screen and (max-width: 500px) {
+
+    .oramovanieKosik{
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    .obsah{
+        display: block;
+    }
+
+    .zoznam{
+        width: 100%;
+    }
+
+}
+
 /*******************************************registracia**********************************************/
 
 .kontajnerRegister {
@@ -512,21 +530,12 @@ text-align: center;
     background-color: #cf2544;
 }
 
-@media only screen and (max-width: 500px) {
 
-    .oramovanieKosik{
-        width: 100%;
-        display: block;
-        text-align: left;
-    }
 
-    .obsah{
-        display: block;
-    }
-
-    .zoznam{
+@media only screen and (max-width: 600px) {
+    .register{
         width: 100%;
     }
-
 }
+
 

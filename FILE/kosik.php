@@ -14,7 +14,7 @@ if (isset($_SESSION['user_email'])) {
     $storage = new DBStorage();
 
     if ((isset($_GET['id'])) && (isset($_GET['note'])) && (!preg_match("/^[0-9]/", $_GET['note']))) {
-        $storage->Update($_GET['note'], ($_GET['id']));
+        $storage->UpdateNoteInCart($_GET['note'], ($_GET['id']));
 
     } else if ((isset($_GET['id'])) && (isset($_GET['note'])) && (preg_match("/^[0-9]/", $_GET['note']))) {
         echo '<script type="text/javascript">';
@@ -27,7 +27,7 @@ if (isset($_SESSION['user_email'])) {
 
         <div class="zoznam" id="zoznam">
 
-            <?php foreach ($storage->LoadAll($_SESSION['user_email']) as $product) { ?>
+            <?php foreach ($storage->LoadAllProductsInCart($_SESSION['user_email']) as $product) { ?>
 
                 <div class="kontainerKosik" id="n<?php echo $product->getId() ?>">
 
@@ -87,7 +87,7 @@ if (isset($_SESSION['user_email'])) {
 
                 <div class="spoluSuma" id="suma">
                     <?php
-                    echo $storage->Price($_SESSION['user_email']);
+                    echo $storage->CountCartPrice($_SESSION['user_email']);
                     ?>
                 </div>
             </div>

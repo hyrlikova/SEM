@@ -26,7 +26,7 @@ $storage = new DBStorage();
 if (isset($_POST['email'], $_POST['heslo'])) {
 
 
-    if ($storage->PrihlasenieCheck($_POST['email'],$_POST['heslo']) == true ) {
+    if ($storage->SingInCheck($_POST['email'],$_POST['heslo']) == true ) {
 
         $_SESSION['user_email'] = $_POST['email'];
 

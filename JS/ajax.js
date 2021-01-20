@@ -33,11 +33,12 @@ function removeFromCart(id) {
     var idType = id.getAttribute("data-id-type");
     $.ajax({
         type: "POST",
-        url: "../FILE/remove.php",
+        url: "../FILE/removeAjax.php",
         data: {id: idType},
 
         success: function (data) {
             removeFromCartSuccess(data,idType);
+
         },
         error: function (data) {
             alert("chyba")

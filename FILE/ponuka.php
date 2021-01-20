@@ -13,7 +13,7 @@ $storage = new DBStorage();
 
 
 if (isset($_POST['name'])) {
-    $storage->Save(new Product(  $_POST['name'], $_POST['price'],"", "",$_SESSION['user_email']));
+    $storage->InsertProductIntoCart(new Product(  $_POST['name'], $_POST['price'],"", "",$_SESSION['user_email']));
 
     echo '<script type="text/javascript">alert("Položka bola pridaná do košíka!");</script>';
 
